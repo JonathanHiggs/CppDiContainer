@@ -6,7 +6,9 @@ using namespace std;
 
 namespace IoC {
 
-	DiContainer::DiContainer() {}
+	DiContainer::DiContainer(shared_ptr<Service::Logger> logger)
+		: IRegistrar(logger)
+	{}
 
 
 	// IResolver

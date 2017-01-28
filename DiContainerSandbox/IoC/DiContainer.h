@@ -3,6 +3,7 @@
 
 #include "IResolver.h"
 #include "IRegistrar.h"
+#include "..\Service\Logger.h"
 #include <functional>
 #include <memory>
 #include <typeindex>
@@ -15,7 +16,7 @@ namespace IoC {
 	class DiContainer : public IResolver, public IRegistrar
 	{
 	public:
-		DiContainer();
+		DiContainer(std::shared_ptr<Service::Logger> logger);
 		~DiContainer() {};
 
 	private:

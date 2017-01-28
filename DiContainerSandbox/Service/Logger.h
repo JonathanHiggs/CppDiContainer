@@ -1,7 +1,6 @@
 #pragma once
 
 
-#include <iostream>
 #include <string>
 
 
@@ -10,11 +9,8 @@ namespace Service {
 	class Logger
 	{
 	public:
-		Logger(std::ostream& os);
-
-		void Info(std::string message);
-
-	private:
-		std::ostream& os;
+		virtual void Info(std::string message) = 0;
+		virtual void Warn(std::string message) = 0;
+		virtual void Write(std::string message) = 0;
 	};
 }

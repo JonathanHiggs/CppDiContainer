@@ -16,7 +16,7 @@ namespace IoC {
 		template<class T>
 		std::shared_ptr<T> Resolve()
 		{
-			return ResolveAs(typeid(T)).GetShared<T>();
+			return ResolveAs(typeid(T)).Get<T>();
 		}
 
 	protected:

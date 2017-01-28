@@ -23,8 +23,9 @@ namespace IoC {
 		~DiItem() {};
 
 		template<class T>
-		std::shared_ptr<T> GetShared() {
-			return typeid(T) == *type ? std::static_pointer_cast<T>(item) : nullptr;
+		std::shared_ptr<T> Get() {
+			std::shared_ptr<T> ret = typeid(T) == *type ? std::static_pointer_cast<T>(item) : nullptr;
+			return ret;
 		}
 
 	private:

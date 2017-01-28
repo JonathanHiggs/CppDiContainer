@@ -27,11 +27,14 @@
     <ClCompile Include="IoC\DiItem.cpp">
       <Filter>Source Files\IoC</Filter>
     </ClCompile>
-    <ClCompile Include="Service\Logger.cpp">
-      <Filter>Source Files\Service</Filter>
-    </ClCompile>
     <ClCompile Include="IoC\DiContainer.cpp">
       <Filter>Source Files\IoC</Filter>
+    </ClCompile>
+    <ClCompile Include="Service\StreamLogger.cpp">
+      <Filter>Source Files\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="Service\NamedLogger.cpp">
+      <Filter>Source Files\Service</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +63,12 @@
       <Filter>Source Files\Service</Filter>
     </ClInclude>
     <ClInclude Include="Service\ServiceB.h">
+      <Filter>Source Files\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Service\NamedLogger.h">
+      <Filter>Source Files\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Service\StreamLogger.h">
       <Filter>Source Files\Service</Filter>
     </ClInclude>
   </ItemGroup>

@@ -149,7 +149,8 @@
     <ClCompile Include="IoC\DiContainer.cpp" />
     <ClCompile Include="IoC\DiItem.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Service\Logger.cpp" />
+    <ClCompile Include="Service\NamedLogger.cpp" />
+    <ClCompile Include="Service\StreamLogger.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IoC\DiContainer.h" />
@@ -158,9 +159,11 @@
     <ClInclude Include="IoC\IRegistrar.h" />
     <ClInclude Include="IoC\IResolver.h" />
     <ClInclude Include="Service\Logger.h" />
+    <ClInclude Include="Service\NamedLogger.h" />
     <ClInclude Include="Service\ServiceA.h" />
     <ClInclude Include="Service\ServiceB.h" />
     <ClInclude Include="Service\ServiceBase.h" />
+    <ClInclude Include="Service\StreamLogger.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

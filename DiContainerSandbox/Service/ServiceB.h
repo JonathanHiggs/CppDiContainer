@@ -10,7 +10,7 @@ namespace Service {
 	{
 	public:
 		ServiceB(std::shared_ptr<Logger> logger)
-			: ServiceBase(logger)
+			: ServiceBase(logger, "ServiceB")
 		{};
 
 		~ServiceB() {};
