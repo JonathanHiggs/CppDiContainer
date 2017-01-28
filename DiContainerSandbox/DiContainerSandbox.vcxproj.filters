@@ -13,5 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\IoC">
+      <UniqueIdentifier>{15a90b3c-7f76-412b-b65d-76f23320143b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Service">
+      <UniqueIdentifier>{2738118a-8dc0-472e-a260-0a7ccef91d5e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IoC\DiItem.cpp">
+      <Filter>Source Files\IoC</Filter>
+    </ClCompile>
+    <ClCompile Include="Service\Logger.cpp">
+      <Filter>Source Files\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="IoC\DiContainer.cpp">
+      <Filter>Source Files\IoC</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IoC\DiContainer.h">
+      <Filter>Source Files\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="IoC\DiCreates.h">
+      <Filter>Source Files\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="IoC\DiItem.h">
+      <Filter>Source Files\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="IoC\IRegistrar.h">
+      <Filter>Source Files\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="IoC\IResolver.h">
+      <Filter>Source Files\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="Service\Logger.h">
+      <Filter>Source Files\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Service\ServiceBase.h">
+      <Filter>Source Files\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Service\ServiceA.h">
+      <Filter>Source Files\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Service\ServiceB.h">
+      <Filter>Source Files\Service</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
