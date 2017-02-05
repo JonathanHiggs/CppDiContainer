@@ -19,9 +19,9 @@ namespace Common {
 		}
 
 
-		Logger LoggingService::GetLogger(string name) const
+		LoggerPtr LoggingService::GetLogger(string name) const
 		{
-			return Logger(name, make_shared<LoggingService>(*this));
+			return make_shared<Logger>(name, make_shared<LoggingService>(*this));
 		}
 
 

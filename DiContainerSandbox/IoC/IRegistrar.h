@@ -2,7 +2,7 @@
 
 
 #include "DiCreates.h"
-#include "..\Service\Logger.h"
+#include "..\Common\logging.h"
 #include <sstream>
 #include <typeinfo>
 
@@ -12,7 +12,7 @@ namespace IoC {
 	class IRegistrar
 	{
 	public:
-		IRegistrar(std::shared_ptr<Service::Logger> logger)
+		IRegistrar(std::shared_ptr<Common::Logging::Logger> logger)
 			: logger(logger)
 		{};
 
@@ -54,6 +54,6 @@ namespace IoC {
 		) = 0;
 
 	private:
-		std::shared_ptr<Service::Logger> logger;
+		std::shared_ptr<Common::Logging::Logger> logger;
 	};
 }

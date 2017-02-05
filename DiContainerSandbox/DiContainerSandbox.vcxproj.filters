@@ -36,12 +36,6 @@
     <ClCompile Include="IoC\DiContainer.cpp">
       <Filter>Source Files\IoC</Filter>
     </ClCompile>
-    <ClCompile Include="Service\StreamLogger.cpp">
-      <Filter>Source Files\Service</Filter>
-    </ClCompile>
-    <ClCompile Include="Service\NamedLogger.cpp">
-      <Filter>Source Files\Service</Filter>
-    </ClCompile>
     <ClCompile Include="Common\Logging\LoggingService.cpp">
       <Filter>Source Files\Common\Logging</Filter>
     </ClCompile>
@@ -71,9 +65,6 @@
     <ClInclude Include="IoC\IResolver.h">
       <Filter>Source Files\IoC</Filter>
     </ClInclude>
-    <ClInclude Include="Service\Logger.h">
-      <Filter>Source Files\Service</Filter>
-    </ClInclude>
     <ClInclude Include="Service\ServiceBase.h">
       <Filter>Source Files\Service</Filter>
     </ClInclude>
@@ -81,12 +72,6 @@
       <Filter>Source Files\Service</Filter>
     </ClInclude>
     <ClInclude Include="Service\ServiceB.h">
-      <Filter>Source Files\Service</Filter>
-    </ClInclude>
-    <ClInclude Include="Service\NamedLogger.h">
-      <Filter>Source Files\Service</Filter>
-    </ClInclude>
-    <ClInclude Include="Service\StreamLogger.h">
       <Filter>Source Files\Service</Filter>
     </ClInclude>
     <ClInclude Include="Common\Logging\ILogHandler.h">

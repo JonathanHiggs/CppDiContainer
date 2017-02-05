@@ -25,5 +25,8 @@ namespace Common {
 			std::shared_ptr<LoggingService> service;
 		};
 
+
+		using LoggerPtr = std::shared_ptr<Logger>;
+
 	}
 }

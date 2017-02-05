@@ -22,7 +22,7 @@ namespace Common {
 			LoggingService();
 
 			void AddHandler(LogHandlerPtr handler);
-			Logger GetLogger(std::string name) const;
+			std::shared_ptr<Logger> GetLogger(std::string name) const;
 
 			void Debug(std::string name, std::string message) const;
 			void Info(std::string name, std::string message) const;

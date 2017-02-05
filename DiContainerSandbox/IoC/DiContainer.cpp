@@ -2,11 +2,12 @@
 
 
 using namespace std;
+using namespace Common::Logging;
 
 
 namespace IoC {
 
-	DiContainer::DiContainer(shared_ptr<Service::Logger> logger)
+	DiContainer::DiContainer(std::shared_ptr<Logger> logger)
 		: IRegistrar(logger)
 	{}
 
