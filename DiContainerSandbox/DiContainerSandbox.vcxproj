@@ -146,6 +146,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Common\Logging\FileHandler.cpp" />
+    <ClCompile Include="Common\Logging\Logger.cpp" />
+    <ClCompile Include="Common\Logging\LoggingService.cpp" />
+    <ClCompile Include="Common\Logging\StreamHandler.cpp" />
     <ClCompile Include="IoC\DiContainer.cpp" />
     <ClCompile Include="IoC\DiItem.cpp" />
     <ClCompile Include="main.cpp" />
@@ -153,6 +157,15 @@
     <ClCompile Include="Service\StreamLogger.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Common\logging.h" />
+    <ClInclude Include="Common\Logging\FileHandler.h" />
+    <ClInclude Include="Common\Logging\ILogFormatter.h" />
+    <ClInclude Include="Common\Logging\ILogHandler.h" />
+    <ClInclude Include="Common\Logging\LogFormatter.h" />
+    <ClInclude Include="Common\Logging\LoggingService.h" />
+    <ClInclude Include="Common\Logging\Logger.h" />
+    <ClInclude Include="Common\Logging\LogLevel.h" />
+    <ClInclude Include="Common\Logging\StreamHandler.h" />
     <ClInclude Include="IoC\DiContainer.h" />
     <ClInclude Include="IoC\DiCreates.h" />
     <ClInclude Include="IoC\DiItem.h" />

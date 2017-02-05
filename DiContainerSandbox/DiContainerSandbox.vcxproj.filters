@@ -19,6 +19,12 @@
     <Filter Include="Source Files\Service">
       <UniqueIdentifier>{2738118a-8dc0-472e-a260-0a7ccef91d5e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{c069fa35-990f-41f8-be21-6463f6b7df1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\Logging">
+      <UniqueIdentifier>{6a77a477-19de-4313-8b2d-a995410320fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -35,6 +41,18 @@
     </ClCompile>
     <ClCompile Include="Service\NamedLogger.cpp">
       <Filter>Source Files\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Logging\LoggingService.cpp">
+      <Filter>Source Files\Common\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Logging\Logger.cpp">
+      <Filter>Source Files\Common\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Logging\StreamHandler.cpp">
+      <Filter>Source Files\Common\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Logging\FileHandler.cpp">
+      <Filter>Source Files\Common\Logging</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +88,33 @@
     </ClInclude>
     <ClInclude Include="Service\StreamLogger.h">
       <Filter>Source Files\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Logging\ILogHandler.h">
+      <Filter>Source Files\Common\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Logging\LogLevel.h">
+      <Filter>Source Files\Common\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Logging\ILogFormatter.h">
+      <Filter>Source Files\Common\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Logging\Logger.h">
+      <Filter>Source Files\Common\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Logging\LoggingService.h">
+      <Filter>Source Files\Common\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Logging\LogFormatter.h">
+      <Filter>Source Files\Common\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Logging\StreamHandler.h">
+      <Filter>Source Files\Common\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\logging.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Logging\FileHandler.h">
+      <Filter>Source Files\Common\Logging</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
