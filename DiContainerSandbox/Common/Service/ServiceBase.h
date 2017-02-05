@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "..\logging.h"
+#include "Common\logging.h"
 #include <memory>
 #include <string>
 

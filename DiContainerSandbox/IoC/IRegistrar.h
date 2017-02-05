@@ -2,7 +2,7 @@
 
 
 #include "DiCreates.h"
-#include "..\Common\logging.h"
+#include "Common\logging.h"
 #include <sstream>
 #include <typeinfo>
 

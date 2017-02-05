@@ -3,7 +3,7 @@
 
 #include "IResolver.h"
 #include "IRegistrar.h"
-#include "..\Common\logging.h"
+#include "Common\logging.h"
 #include <functional>
 #include <memory>
 #include <typeindex>

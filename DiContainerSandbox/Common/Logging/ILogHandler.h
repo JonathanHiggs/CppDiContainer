@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include "..\..\Util\memory.h"
+#include "Util\memory.h"
 #include "LogLevel.h"
 
 

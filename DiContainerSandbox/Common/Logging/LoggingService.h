@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-#include "..\..\Util\memory.h"
+#include "Util\memory.h"
 #include "LogLevel.h"
 #include "ILogHandler.h"
 
