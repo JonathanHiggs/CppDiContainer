@@ -4,6 +4,8 @@
 #include <memory>
 #include <string>
 
+#include "..\..\Util\memory.h"
+
 #include "LogLevel.h"
 
 
@@ -34,7 +36,6 @@ namespace Common {
 			}
 		};
 		
-
-		using LogFormatterPtr = std::shared_ptr<ILogFormatter>;
+		DECLARE_POINTERS(ILogFormatter);
 	}
 }

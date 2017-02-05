@@ -7,7 +7,7 @@ using namespace std;
 namespace Common {
 	namespace Logging {
 
-		FileHandler::FileHandler(string name, LogFormatterPtr formatter)
+		FileHandler::FileHandler(string name, ILogFormatterPtr formatter)
 			: fileStream(name), formatter(formatter)
 		{}
 

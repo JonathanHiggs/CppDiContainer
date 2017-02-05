@@ -9,21 +9,20 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Source Files\IoC">
       <UniqueIdentifier>{15a90b3c-7f76-412b-b65d-76f23320143b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Service">
-      <UniqueIdentifier>{2738118a-8dc0-472e-a260-0a7ccef91d5e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Common">
       <UniqueIdentifier>{c069fa35-990f-41f8-be21-6463f6b7df1f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Common\Logging">
       <UniqueIdentifier>{6a77a477-19de-4313-8b2d-a995410320fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\Service">
+      <UniqueIdentifier>{2738118a-8dc0-472e-a260-0a7ccef91d5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{e59fba77-388b-4c9d-9934-4c15ea443909}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -65,15 +64,6 @@
     <ClInclude Include="IoC\IResolver.h">
       <Filter>Source Files\IoC</Filter>
     </ClInclude>
-    <ClInclude Include="Service\ServiceBase.h">
-      <Filter>Source Files\Service</Filter>
-    </ClInclude>
-    <ClInclude Include="Service\ServiceA.h">
-      <Filter>Source Files\Service</Filter>
-    </ClInclude>
-    <ClInclude Include="Service\ServiceB.h">
-      <Filter>Source Files\Service</Filter>
-    </ClInclude>
     <ClInclude Include="Common\Logging\ILogHandler.h">
       <Filter>Source Files\Common\Logging</Filter>
     </ClInclude>
@@ -100,6 +90,18 @@
     </ClInclude>
     <ClInclude Include="Common\Logging\FileHandler.h">
       <Filter>Source Files\Common\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Service\ServiceA.h">
+      <Filter>Source Files\Common\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Service\ServiceB.h">
+      <Filter>Source Files\Common\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Service\ServiceBase.h">
+      <Filter>Source Files\Common\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\memory.h">
+      <Filter>Util</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

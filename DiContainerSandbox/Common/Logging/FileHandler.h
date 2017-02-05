@@ -14,14 +14,14 @@ namespace Common {
 		class FileHandler : public ILogHandler
 		{
 		public:
-			FileHandler(std::string name, LogFormatterPtr formatter);
+			FileHandler(std::string name, ILogFormatterPtr formatter);
 			~FileHandler();
 
 			virtual void Write(LogLevel level, std::string name, std::string message);
 
 		private:
 			std::ofstream fileStream;
-			LogFormatterPtr formatter;
+			ILogFormatterPtr formatter;
 		};
 
 	}

@@ -11,13 +11,13 @@ namespace Common {
 		class StreamHandler : public ILogHandler
 		{
 		public:
-			StreamHandler(std::ostream& os, LogFormatterPtr formatter);
+			StreamHandler(std::ostream& os, ILogFormatterPtr formatter);
 
 			virtual void Write(LogLevel level, std::string name, std::string message);
 
 		private:
 			std::ostream& os;
-			LogFormatterPtr formatter;
+			ILogFormatterPtr formatter;
 		};
 
 	}

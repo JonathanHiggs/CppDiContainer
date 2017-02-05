@@ -13,7 +13,7 @@ namespace Common {
 		{}
 
 
-		void LoggingService::AddHandler(LogHandlerPtr handler)
+		void LoggingService::AddHandler(ILogHandlerPtr handler)
 		{
 			handlers.push_back(handler);
 		}

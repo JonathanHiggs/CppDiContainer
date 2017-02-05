@@ -9,7 +9,7 @@ namespace Service {
 	class ServiceB : public ServiceBase
 	{
 	public:
-		ServiceB(std::shared_ptr<Common::Logging::Logger> logger)
+		ServiceB(Common::Logging::LoggerCPtr logger)
 			: ServiceBase(logger)
 		{};
 

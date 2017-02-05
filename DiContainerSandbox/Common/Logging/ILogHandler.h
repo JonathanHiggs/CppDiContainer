@@ -3,17 +3,20 @@
 
 #include <string>
 
+#include "..\..\Util\memory.h"
 #include "LogLevel.h"
 
 
 namespace Common {
-namespace Logging {
+	namespace Logging {
 
-	class ILogHandler
-	{
-	public:
-		virtual void Write(LogLevel level, std::string name, std::string message) = 0;
-	};
+		class ILogHandler
+		{
+		public:
+			virtual void Write(LogLevel level, std::string name, std::string message) = 0;
+		};
 
-}
+		DECLARE_POINTERS(ILogHandler);
+
+	}
 }

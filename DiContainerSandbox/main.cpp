@@ -1,8 +1,8 @@
 #include <iostream>
 #include "IoC\DiContainer.h"
 #include "Common\logging.h"
-#include "Service\ServiceA.h"
-#include "Service\ServiceB.h"
+#include "Common\Service\ServiceA.h"
+#include "Common\Service\ServiceB.h"
 
 
 using namespace std;

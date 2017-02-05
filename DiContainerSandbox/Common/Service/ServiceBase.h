@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "..\Common\logging.h"
+#include "..\logging.h"
 #include <memory>
 #include <string>
 
@@ -11,7 +11,7 @@ namespace Service {
 	class ServiceBase
 	{
 	public:
-		ServiceBase(std::shared_ptr<Common::Logging::Logger> logger)
+		ServiceBase(Common::Logging::LoggerCPtr logger)
 			: logger(logger)
 		{ };
 
@@ -20,6 +20,6 @@ namespace Service {
 		virtual void Init() = 0;
 
 	protected:
-		std::shared_ptr<Common::Logging::Logger> logger;
+		Common::Logging::LoggerCPtr logger;
 	};
 }

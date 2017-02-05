@@ -7,7 +7,7 @@ using namespace std;
 namespace Common {
 	namespace Logging {
 
-		StreamHandler::StreamHandler(ostream& os, LogFormatterPtr formatter)
+		StreamHandler::StreamHandler(ostream& os, ILogFormatterPtr formatter)
 			: os(os), formatter(formatter)
 		{}
 

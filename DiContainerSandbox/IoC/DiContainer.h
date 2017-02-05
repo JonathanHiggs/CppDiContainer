@@ -16,7 +16,7 @@ namespace IoC {
 	class DiContainer : public IResolver, public IRegistrar
 	{
 	public:
-		DiContainer(std::shared_ptr<Common::Logging::Logger> logger);
+		DiContainer(Common::Logging::LoggerCPtr logger);
 		~DiContainer() {};
 
 	private:

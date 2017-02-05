@@ -12,7 +12,7 @@ namespace IoC {
 	class IRegistrar
 	{
 	public:
-		IRegistrar(std::shared_ptr<Common::Logging::Logger> logger)
+		IRegistrar(Common::Logging::LoggerCPtr logger)
 			: logger(logger)
 		{};
 
@@ -54,6 +54,6 @@ namespace IoC {
 		) = 0;
 
 	private:
-		std::shared_ptr<Common::Logging::Logger> logger;
+		Common::Logging::LoggerCPtr logger;
 	};
 }

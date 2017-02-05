@@ -7,7 +7,7 @@ using namespace Common::Logging;
 
 namespace IoC {
 
-	DiContainer::DiContainer(std::shared_ptr<Logger> logger)
+	DiContainer::DiContainer(LoggerCPtr logger)
 		: IRegistrar(logger)
 	{}
 

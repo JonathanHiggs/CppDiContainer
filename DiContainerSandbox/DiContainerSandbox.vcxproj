@@ -164,14 +164,15 @@
     <ClInclude Include="Common\Logging\Logger.h" />
     <ClInclude Include="Common\Logging\LogLevel.h" />
     <ClInclude Include="Common\Logging\StreamHandler.h" />
+    <ClInclude Include="Common\Service\ServiceA.h" />
+    <ClInclude Include="Common\Service\ServiceB.h" />
+    <ClInclude Include="Common\Service\ServiceBase.h" />
     <ClInclude Include="IoC\DiContainer.h" />
     <ClInclude Include="IoC\DiCreates.h" />
     <ClInclude Include="IoC\DiItem.h" />
     <ClInclude Include="IoC\IRegistrar.h" />
     <ClInclude Include="IoC\IResolver.h" />
-    <ClInclude Include="Service\ServiceA.h" />
-    <ClInclude Include="Service\ServiceB.h" />
-    <ClInclude Include="Service\ServiceBase.h" />
+    <ClInclude Include="Util\memory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

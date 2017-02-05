@@ -5,24 +5,24 @@
 #include <string>
 #include <vector>
 
+#include "..\..\Util\memory.h"
 #include "LogLevel.h"
 #include "ILogHandler.h"
 
 
 namespace Common {
 	namespace Logging {
-
-		using LogHandlerPtr = std::shared_ptr<ILogHandler>;
-
+		
 		class Logger;
+		DECLARE_POINTERS(Logger);
 		
 		class LoggingService 
 		{
 		public:
 			LoggingService();
 
-			void AddHandler(LogHandlerPtr handler);
-			std::shared_ptr<Logger> GetLogger(std::string name) const;
+			void AddHandler(ILogHandlerPtr handler);
+			LoggerPtr GetLogger(std::string name) const;
 
 			void Debug(std::string name, std::string message) const;
 			void Info(std::string name, std::string message) const;
@@ -32,8 +32,10 @@ namespace Common {
 		private:
 			void Write(LogLevel level, std::string name, std::string message) const;
 
-			std::vector<LogHandlerPtr> handlers;
+			std::vector<ILogHandlerPtr> handlers;
 		};
+
+		DECLARE_POINTERS(LoggingService);
 
 	}
 }
