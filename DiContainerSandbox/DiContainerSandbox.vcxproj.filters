@@ -5,9 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Source Files\IoC">
-      <UniqueIdentifier>{15a90b3c-7f76-412b-b65d-76f23320143b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Common">
       <UniqueIdentifier>{c069fa35-990f-41f8-be21-6463f6b7df1f}</UniqueIdentifier>
     </Filter>
@@ -28,12 +25,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IoC\DiItem.cpp">
-      <Filter>Source Files\IoC</Filter>
-    </ClCompile>
-    <ClCompile Include="IoC\DiContainer.cpp">
-      <Filter>Source Files\IoC</Filter>
-    </ClCompile>
     <ClCompile Include="Common\Logging\LoggingService.cpp">
       <Filter>Source Files\Common\Logging</Filter>
     </ClCompile>
@@ -52,26 +43,8 @@
     <ClCompile Include="Bootstrap\DiMapping.cpp">
       <Filter>Source Files\Bootstrap</Filter>
     </ClCompile>
-    <ClCompile Include="Bootstrap\DiResult.cpp">
-      <Filter>Source Files\Bootstrap</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IoC\DiContainer.h">
-      <Filter>Source Files\IoC</Filter>
-    </ClInclude>
-    <ClInclude Include="IoC\DiCreates.h">
-      <Filter>Source Files\IoC</Filter>
-    </ClInclude>
-    <ClInclude Include="IoC\DiItem.h">
-      <Filter>Source Files\IoC</Filter>
-    </ClInclude>
-    <ClInclude Include="IoC\IRegistrar.h">
-      <Filter>Source Files\IoC</Filter>
-    </ClInclude>
-    <ClInclude Include="IoC\IResolver.h">
-      <Filter>Source Files\IoC</Filter>
-    </ClInclude>
     <ClInclude Include="Common\Logging\ILogHandler.h">
       <Filter>Source Files\Common\Logging</Filter>
     </ClInclude>
@@ -126,7 +99,10 @@
     <ClInclude Include="Bootstrap\IResolver.h">
       <Filter>Source Files\Bootstrap</Filter>
     </ClInclude>
-    <ClInclude Include="Bootstrap\DiMapping.h">
+    <ClInclude Include="Bootstrap\IDiItem.h">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\DiSingleton.h">
       <Filter>Source Files\Bootstrap</Filter>
     </ClInclude>
   </ItemGroup>

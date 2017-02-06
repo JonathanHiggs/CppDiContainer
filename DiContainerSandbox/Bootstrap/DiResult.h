@@ -1,6 +1,7 @@
 #pragma once
 
 
+#include <iostream>
 #include <memory>
 #include <typeinfo>
 
@@ -10,14 +11,21 @@ namespace Bootstrap {
 	class DiResult
 	{
 	public:
-		DiResult();
+		DiResult()
+			: type(&typeid(nullptr))
+		{}
 
-		DiResult(std::nullptr_t);
+		DiResult(std::nullptr_t)
+		{
+			std::cout << "Made null ptr result" << std::endl;
+		}
 
 		template<class T>
 		DiResult(std::shared_ptr<T> item)
 			: type(&typeid(T)), item(item)
-		{}
+		{
+			std::cout << "Made valid result" << std::endl;
+		}
 
 		~DiResult() {};
 

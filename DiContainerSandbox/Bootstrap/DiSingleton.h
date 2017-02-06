@@ -1,33 +1,24 @@
 #pragma once
 
 
-#include <functional>
 #include <memory>
 
-#include "IDiItem.h"
 #include "DiCreate.h"
+#include "IDiItem.h"
 
 
 namespace Bootstrap {
 
-	template<class T>
-	class DiSingleton : public IDiItem<T>
+	class DiSingleton : public IDiItem
 	{
 	public:
-		DiSingleton(DiCreates::CreatedType<T> create)
-			: create(create)
-		{};
+		DiSingleton(DiCreates::Create create);
 				
-		virtual std::shared_ptr<T> Resolve(IResolver & resolver)
-		{
-			if (instance == nullptr)
-				instance = create(*this);
-
-			return instance;
-		};
+		virtual DiResult Resolve(IResolver & resolver);
 
 	private:
-		const DiCreates::CreatedType<T> create;
-		std::shared_ptr<T> instance;
+		const DiCreates::Create create;
+		bool created;
+		DiResult result;
 	};
 }

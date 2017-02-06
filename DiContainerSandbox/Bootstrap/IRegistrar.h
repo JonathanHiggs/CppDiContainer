@@ -6,7 +6,8 @@
 
 #include "Common\logging.h"
 
-#include "DiMapping.h"
+#include "IDiItem.h"
+#include "DiSingleton.h"
 
 
 namespace Bootstrap {
@@ -25,9 +26,7 @@ namespace Bootstrap {
 			message << "Registering " << typeid(T).name();
 			logger->Info(message.str());
 
-			DiMapping mapping(create);
-
-			RegisterAs(typeid(T), mapping);
+			RegisterAs(typeid(T), std::make_shared<DiSingleton>(create));
 		};
 
 		virtual ~IRegistrar() {};
@@ -35,7 +34,7 @@ namespace Bootstrap {
 	protected:
 		virtual void RegisterAs(
 			std::type_info const & sharedPtrType,
-			DiMapping const & item
+			std::shared_ptr<IDiItem> const & item
 		) = 0;
 
 	private:

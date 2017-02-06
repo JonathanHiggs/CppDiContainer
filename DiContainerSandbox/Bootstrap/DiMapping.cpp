@@ -1,4 +1,4 @@
-#include "DiMapping.h"
+#include "DiSingleton.h"
 
 
 using namespace std;
@@ -6,32 +6,19 @@ using namespace std;
 
 namespace Bootstrap {
 
-	DiMapping::DiMapping(DiCreates::Create create)
-		: create(create), singleton(true), result(nullptr)
+	DiSingleton::DiSingleton(DiCreates::Create create)
+		: create(create), created(false)
 	{}
 
 
-	DiMapping& DiMapping::SetSingleton(bool val)
+	DiResult DiSingleton::Resolve(IResolver & resolver)
 	{
-		singleton = val;
-		return *this;
-	}
+		if (!created)
+		{
+			result = create(resolver);
+			created = true;
+		}
 
-
-	shared_ptr<DiResult> DiMapping::Get(IResolver & resolver)
-	{
-		if (singleton && result == nullptr)
-		{
-			result = make_shared<DiResult>(create(resolver));
-			return result;
-		}
-		else if (singleton && result != nullptr)
-		{
-			return result;
-		}
-		else
-		{
-			return make_shared<DiResult>(create(resolver));
-		}
+		return result;
 	}
 }

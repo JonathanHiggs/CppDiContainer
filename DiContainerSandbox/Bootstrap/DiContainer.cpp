@@ -1,7 +1,6 @@
 #include "DiContainer.h"
 
 
-using namespace std;
 using namespace Common::Logging;
 
 
@@ -12,16 +11,16 @@ namespace Bootstrap {
 	{}
 
 
-	DiResult DiContainer::ResolveAs(type_info const & sharedPtrType)
+	DiResult DiContainer::ResolveAs(std::type_info const & sharedPtrType)
 	{
 		auto pair = items.find(sharedPtrType);
-		return pair == items.end() ? nullptr : pair->second.Get(*this);
+		return pair == items.end() ? nullptr : pair->second->Resolve(*this);
 	}
 
 
-	void DiContainer::RegisterAs(type_info const & sharedPtrType, DiMapping const & item)
+	void DiContainer::RegisterAs(std::type_info const & sharedPtrType, std::shared_ptr<IDiItem> const & item)
 	{
-		type_index type(sharedPtrType);
+		std::type_index type(sharedPtrType);
 		items.insert(ItemMap::value_type(type, item));
 	}
 }

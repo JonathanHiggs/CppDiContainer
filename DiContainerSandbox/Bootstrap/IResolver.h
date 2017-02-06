@@ -3,7 +3,7 @@
 
 #include <typeinfo>
 
-#include "DiMapping.h"
+#include "DiSingleton.h"
 #include "DiResult.h"
 
 

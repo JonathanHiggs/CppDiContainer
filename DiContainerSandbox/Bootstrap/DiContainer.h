@@ -7,7 +7,7 @@
 #include "Common\logging.h"
 
 #include "DiResult.h"
-#include "DiMapping.h"
+#include "DiSingleton.h"
 #include "IRegistrar.h"
 #include "IResolver.h"
 
@@ -21,14 +21,14 @@ namespace Bootstrap {
 		~DiContainer() {};
 
 	private:
-		typedef std::unordered_map<std::type_index, DiMapping> ItemMap;
+		typedef std::unordered_map<std::type_index, std::shared_ptr<IDiItem>> ItemMap;
 		ItemMap items;
 
 		virtual DiResult ResolveAs(std::type_info const & sharedPtrType);
 
 		virtual void RegisterAs(
 			std::type_info const & sharedPtrType,
-			DiMapping const & item
+			std::shared_ptr<IDiItem> const & item
 		);
 	};
 
