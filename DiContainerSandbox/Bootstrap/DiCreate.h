@@ -11,9 +11,10 @@
 namespace Bootstrap {
 	namespace DiCreates {
 
-		typedef std::function<DiResult(IResolver & resolver)> Create;
+		typedef std::function<DiResult(IResolver & resolver)> Constructor;
 
 		template<class T>
 		using CreatedType = std::function<std::shared_ptr<T>(IResolver & resolver)>;
+
 	}
 }

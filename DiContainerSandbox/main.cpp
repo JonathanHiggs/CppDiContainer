@@ -33,8 +33,8 @@ DiContainer bootstrap(shared_ptr<LoggingService> loggingService)
 {
 	DiContainer container = DiContainer(loggingService->GetLogger("DiContainer"));
 
-	container.Register<DiContainer>([=](IResolver & r) { return make_shared<DiContainer>(container); });
-	container.Register<LoggingService>([=](IResolver & r) { return shared_ptr<LoggingService>(loggingService); });
+	container.Register<DiContainer>(make_shared<DiContainer>(container));
+	container.Register<LoggingService>(loggingService);
 	container.Register<ServiceA>([](IResolver & r) { return make_shared<ServiceA>(r.Resolve<LoggingService>()->GetLogger("ServiceA")); });
 	container.Register<ServiceB>([](IResolver & r) { return make_shared<ServiceB>(r.Resolve<LoggingService>()->GetLogger("ServiceB")); });
 
@@ -54,5 +54,4 @@ int main()
 
 	auto serviceB = container.Resolve<ServiceB>();
 	serviceB->Init();
-
 }

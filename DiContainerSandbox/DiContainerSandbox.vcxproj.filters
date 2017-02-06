@@ -40,7 +40,7 @@
     <ClCompile Include="Bootstrap\DiContainer.cpp">
       <Filter>Source Files\Bootstrap</Filter>
     </ClCompile>
-    <ClCompile Include="Bootstrap\DiMapping.cpp">
+    <ClCompile Include="Bootstrap\DiSingleton.cpp">
       <Filter>Source Files\Bootstrap</Filter>
     </ClCompile>
   </ItemGroup>

@@ -159,7 +159,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bootstrap\DiContainer.cpp" />
-    <ClCompile Include="Bootstrap\DiMapping.cpp" />
+    <ClCompile Include="Bootstrap\DiSingleton.cpp" />
     <ClCompile Include="Common\Logging\FileHandler.cpp" />
     <ClCompile Include="Common\Logging\Logger.cpp" />
     <ClCompile Include="Common\Logging\LoggingService.cpp" />
