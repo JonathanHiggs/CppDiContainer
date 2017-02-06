@@ -24,13 +24,13 @@ namespace Common {
 			void AddHandler(ILogHandlerPtr handler);
 			LoggerPtr GetLogger(std::string name) const;
 
-			void Debug(std::string name, std::string message) const;
-			void Info(std::string name, std::string message) const;
-			void Warning(std::string name, std::string message) const;
-			void Exception(std::string name, std::string message) const;
+			void Debug(const std::string& name, std::string& message) const;
+			void Info(const std::string& name, std::string& message) const;
+			void Warning(const std::string& name, std::string& message) const;
+			void Exception(const std::string& name, std::string& message) const;
 
 		private:
-			void Write(LogLevel level, std::string name, std::string message) const;
+			void Write(const LogLevel level, const std::string& name, const std::string& message) const;
 
 			std::vector<ILogHandlerPtr> handlers;
 		};

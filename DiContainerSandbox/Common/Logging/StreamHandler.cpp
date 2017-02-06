@@ -12,7 +12,7 @@ namespace Common {
 		{}
 
 
-		void StreamHandler::Write(LogLevel level, string name, string message)
+		void StreamHandler::Write(const LogLevel& level, const string& name, const string& message)
 		{
 			os << formatter->Format(level, name, message);
 		}

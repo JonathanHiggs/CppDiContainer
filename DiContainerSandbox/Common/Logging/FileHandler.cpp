@@ -18,7 +18,7 @@ namespace Common {
 		}
 
 
-		void FileHandler::Write(LogLevel level, string name, string message)
+		void FileHandler::Write(const LogLevel& level, const string& name, const string& message)
 		{
 			fileStream << formatter->Format(level, name, message);
 		}
