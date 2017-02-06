@@ -158,6 +158,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bootstrap\DiContainer.cpp" />
+    <ClCompile Include="Bootstrap\DiMapping.cpp" />
+    <ClCompile Include="Bootstrap\DiResult.cpp" />
     <ClCompile Include="Common\Logging\FileHandler.cpp" />
     <ClCompile Include="Common\Logging\Logger.cpp" />
     <ClCompile Include="Common\Logging\LoggingService.cpp" />
@@ -167,6 +170,12 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bootstrap\DiContainer.h" />
+    <ClInclude Include="Bootstrap\DiCreate.h" />
+    <ClInclude Include="Bootstrap\DiMapping.h" />
+    <ClInclude Include="Bootstrap\DiResult.h" />
+    <ClInclude Include="Bootstrap\IRegistrar.h" />
+    <ClInclude Include="Bootstrap\IResolver.h" />
     <ClInclude Include="Common\logging.h" />
     <ClInclude Include="Common\Logging\FileHandler.h" />
     <ClInclude Include="Common\Logging\ILogFormatter.h" />

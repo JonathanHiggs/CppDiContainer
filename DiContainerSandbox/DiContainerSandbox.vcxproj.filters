@@ -5,10 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Source Files\IoC">
       <UniqueIdentifier>{15a90b3c-7f76-412b-b65d-76f23320143b}</UniqueIdentifier>
     </Filter>
@@ -23,6 +19,9 @@
     </Filter>
     <Filter Include="Source Files\Util">
       <UniqueIdentifier>{e59fba77-388b-4c9d-9934-4c15ea443909}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Bootstrap">
+      <UniqueIdentifier>{2bd9cfba-6671-41f4-a11a-597a7142e852}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +45,15 @@
     </ClCompile>
     <ClCompile Include="Common\Logging\FileHandler.cpp">
       <Filter>Source Files\Common\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="Bootstrap\DiContainer.cpp">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClCompile>
+    <ClCompile Include="Bootstrap\DiMapping.cpp">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClCompile>
+    <ClCompile Include="Bootstrap\DiResult.cpp">
+      <Filter>Source Files\Bootstrap</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +110,24 @@
     </ClInclude>
     <ClInclude Include="Util\memory.h">
       <Filter>Source Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\DiContainer.h">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\IRegistrar.h">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\DiCreate.h">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\DiResult.h">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\IResolver.h">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\DiMapping.h">
+      <Filter>Source Files\Bootstrap</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

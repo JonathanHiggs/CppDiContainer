@@ -1,5 +1,5 @@
 #include <iostream>
-#include "IoC\DiContainer.h"
+#include "Bootstrap\DiContainer.h"
 #include "Common\logging.h"
 #include "Common\Service\ServiceA.h"
 #include "Common\Service\ServiceB.h"
@@ -8,7 +8,7 @@
 #include <ctime>
 
 using namespace std;
-using namespace IoC;
+using namespace Bootstrap;
 using namespace Common::Logging;
 using namespace Service;
 
