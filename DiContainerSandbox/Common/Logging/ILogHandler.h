@@ -13,7 +13,7 @@ namespace Common {
 		class ILogHandler
 		{
 		public:
-			virtual void Write(LogLevel level, std::string name, std::string message) = 0;
+			virtual void Write(const LogLevel& level, const std::string& name, const std::string& message) = 0;
 		};
 
 		DECLARE_POINTERS(ILogHandler);

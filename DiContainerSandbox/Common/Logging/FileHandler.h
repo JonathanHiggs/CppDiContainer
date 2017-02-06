@@ -17,7 +17,7 @@ namespace Common {
 			FileHandler(std::string name, ILogFormatterPtr formatter);
 			~FileHandler();
 
-			virtual void Write(LogLevel level, std::string name, std::string message);
+			virtual void Write(const LogLevel& level, const std::string& name, const std::string& message);
 
 		private:
 			std::ofstream fileStream;

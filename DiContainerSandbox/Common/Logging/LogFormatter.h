@@ -14,7 +14,7 @@ namespace Common {
 		class LogFormatter : public ILogFormatter
 		{
 		public:
-			virtual std::string Format(LogLevel level, std::string name, std::string message) const
+			virtual std::string Format(const LogLevel& level, const std::string& name, const std::string& message) const
 			{
 				auto t = std::time(nullptr);
 				std::tm timeinfo;

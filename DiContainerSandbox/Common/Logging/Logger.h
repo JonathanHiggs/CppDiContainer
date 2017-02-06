@@ -15,10 +15,10 @@ namespace Common {
 		public:
 			Logger(std::string name, std::shared_ptr<LoggingService> service);
 			
-			void Debug(std::string message) const;
-			void Info(std::string message) const;
-			void Warning(std::string message) const;
-			void Exception(std::string message) const;
+			void Debug(const std::string message) const;
+			void Info(const std::string message) const;
+			void Warning(const std::string message) const;
+			void Exception(const std::string message) const;
 
 		private:
 			std::string name;

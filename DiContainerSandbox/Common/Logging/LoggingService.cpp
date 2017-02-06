@@ -25,31 +25,31 @@ namespace Common {
 		}
 
 
-		void LoggingService::Debug(string name, string message) const
+		void LoggingService::Debug(const string& name, string& message) const
 		{
 			Write(LogLevel::Debug, name, message);
 		}
 
 		
-		void LoggingService::Info(string name, string message) const
+		void LoggingService::Info(const string& name, string& message) const
 		{
 			Write(LogLevel::Info, name, message);
 		}
 
 
-		void LoggingService::Warning(string name, string message) const
+		void LoggingService::Warning(const string& name, string& message) const
 		{
 			Write(LogLevel::Warning, name, message);
 		}
 
 
-		void LoggingService::Exception(string name, string message) const
+		void LoggingService::Exception(const string& name, string& message) const
 		{
 			Write(LogLevel::Exception, name, message);
 		}
 
 
-		void LoggingService::Write(LogLevel level, string name, string message) const
+		void LoggingService::Write(const LogLevel level, const string& name, const string& message) const
 		{
 			for (auto handler : handlers)
 				handler->Write(level, name, message);

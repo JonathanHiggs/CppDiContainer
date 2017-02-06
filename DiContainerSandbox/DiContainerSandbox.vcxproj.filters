@@ -21,7 +21,7 @@
     <Filter Include="Source Files\Common\Service">
       <UniqueIdentifier>{2738118a-8dc0-472e-a260-0a7ccef91d5e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Util">
+    <Filter Include="Source Files\Util">
       <UniqueIdentifier>{e59fba77-388b-4c9d-9934-4c15ea443909}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -101,7 +101,7 @@
       <Filter>Source Files\Common\Service</Filter>
     </ClInclude>
     <ClInclude Include="Util\memory.h">
-      <Filter>Util</Filter>
+      <Filter>Source Files\Util</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

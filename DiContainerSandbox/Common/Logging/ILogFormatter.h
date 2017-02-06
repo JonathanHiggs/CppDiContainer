@@ -15,10 +15,10 @@ namespace Common {
 		class ILogFormatter 
 		{
 		public:
-			virtual std::string Format(LogLevel level, std::string name, std::string message) const = 0;
+			virtual std::string Format(const LogLevel& level, const std::string&name, const std::string& message) const = 0;
 
 		protected:
-			std::string StringFromLevel(LogLevel level) const
+			std::string StringFromLevel(const LogLevel& level) const
 			{
 				switch (level)
 				{
