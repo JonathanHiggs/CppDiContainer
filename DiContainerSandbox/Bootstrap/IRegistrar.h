@@ -7,7 +7,7 @@
 #include "Util\types.h"
 #include "Common\logging.h"
 #include "Bootstrap\IDiItem.h"
-#include "Bootstrap\DiSingleton.h"
+#include "Bootstrap\DiItemSingle.h"
 
 
 namespace Bootstrap {
@@ -30,7 +30,7 @@ namespace Bootstrap {
 			message << "Registering " << Util::ClassName<T>();
 			logger->Info(message.str());
 
-			RegisterAs(typeid(T), std::make_shared<DiSingleton>(create));
+			RegisterAs(typeid(T), std::make_shared<DiItemSingle>(create));
 		};
 
 
@@ -55,7 +55,7 @@ namespace Bootstrap {
 			message << "Registering instance " << Util::ClassName<T>();
 			logger->Info(message.str());
 
-			RegisterAs(typeid(T), std::make_shared<DiSingleton>(DiResult(instance)));
+			RegisterAs(typeid(T), std::make_shared<DiItemSingle>(DiResult(instance)));
 		}
 
 

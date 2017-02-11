@@ -7,7 +7,7 @@
 #include "Util\types.h"
 #include "Common\logging.h"
 #include "Bootstrap\DiResult.h"
-#include "Bootstrap\DiSingleton.h"
+#include "Bootstrap\DiItemSingle.h"
 #include "Bootstrap\IRegistrar.h"
 #include "Bootstrap\IResolver.h"
 
@@ -23,7 +23,7 @@ namespace Bootstrap {
 		friend std::ostream& operator<< (std::ostream& os, DiContainer const & container);
 
 	private:
-		typedef std::unordered_map<std::type_index, std::shared_ptr<IDiItem>> ItemMap;
+		typedef std::unordered_map<std::type_index, DiItemPtrPtr> ItemMap;
 		ItemMap items;
 
 		// IResolver
@@ -32,7 +32,7 @@ namespace Bootstrap {
 		// IRegistrar
 		virtual void RegisterAs(
 			std::type_info const & sharedPtrType,
-			std::shared_ptr<IDiItem> const & item
+			DiItemPtr const & item
 		);
 	};
 

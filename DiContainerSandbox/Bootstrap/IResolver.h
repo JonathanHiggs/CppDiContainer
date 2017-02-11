@@ -3,7 +3,6 @@
 
 #include <typeinfo>
 
-#include "Bootstrap\DiSingleton.h"
 #include "Bootstrap\DiResult.h"
 
 

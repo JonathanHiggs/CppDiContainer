@@ -24,4 +24,8 @@ namespace Bootstrap {
 		virtual void PrintConfig(std::ostream& os) const = 0;
 	};
 
+
+	using DiItemPtr = std::shared_ptr<IDiItem>;
+	using DiItemPtrPtr = std::shared_ptr<DiItemPtr>;
+
 }

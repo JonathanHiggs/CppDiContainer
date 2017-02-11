@@ -1,21 +1,19 @@
 #pragma once
 
 
-#include <memory>
-
 #include "Bootstrap\DiCreate.h"
 #include "Bootstrap\IDiItem.h"
 
 
 namespace Bootstrap {
 
-	class DiSingleton : public IDiItem
+	class DiItemSingle : public IDiItem
 	{
 	public:
-		DiSingleton(DiCreates::Constructor create);
-		DiSingleton(DiResult instance);
+		DiItemSingle(DiCreates::Constructor create);
+		DiItemSingle(DiResult instance);
 
-		virtual ~DiSingleton() {};
+		virtual ~DiItemSingle() {};
 				
 		virtual DiResult Resolve(IResolver & resolver);
 
@@ -27,4 +25,5 @@ namespace Bootstrap {
 		bool created;
 		DiResult instance;
 	};
+
 }

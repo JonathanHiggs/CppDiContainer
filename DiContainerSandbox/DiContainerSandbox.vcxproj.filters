@@ -40,11 +40,14 @@
     <ClCompile Include="Bootstrap\DiContainer.cpp">
       <Filter>Source Files\Bootstrap</Filter>
     </ClCompile>
-    <ClCompile Include="Bootstrap\DiSingleton.cpp">
-      <Filter>Source Files\Bootstrap</Filter>
-    </ClCompile>
     <ClCompile Include="Util\types.cpp">
       <Filter>Source Files\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Bootstrap\DiItemMany.cpp">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClCompile>
+    <ClCompile Include="Bootstrap\DiItemSingle.cpp">
+      <Filter>Source Files\Bootstrap</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -105,11 +108,14 @@
     <ClInclude Include="Bootstrap\IDiItem.h">
       <Filter>Source Files\Bootstrap</Filter>
     </ClInclude>
-    <ClInclude Include="Bootstrap\DiSingleton.h">
-      <Filter>Source Files\Bootstrap</Filter>
-    </ClInclude>
     <ClInclude Include="Util\types.h">
       <Filter>Source Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\DiItemMany.h">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\DiItemSingle.h">
+      <Filter>Source Files\Bootstrap</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

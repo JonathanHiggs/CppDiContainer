@@ -13,14 +13,14 @@ namespace Bootstrap {
 	DiResult DiContainer::ResolveAs(std::type_info const & sharedPtrType)
 	{
 		auto pair = items.find(sharedPtrType);
-		return pair == items.end() ? nullptr : pair->second->Resolve(*this);
+		return pair == items.end() ? nullptr : pair->second->get()->Resolve(*this);
 	}
 
 
-	void DiContainer::RegisterAs(std::type_info const & sharedPtrType, std::shared_ptr<IDiItem> const & item)
+	void DiContainer::RegisterAs(std::type_info const & sharedPtrType, DiItemPtr const & item)
 	{
 		std::type_index type(sharedPtrType);
-		items.insert(ItemMap::value_type(type, item));
+		items.insert(ItemMap::value_type(type, std::make_shared<DiItemPtr>(item)));
 	}
 
 
