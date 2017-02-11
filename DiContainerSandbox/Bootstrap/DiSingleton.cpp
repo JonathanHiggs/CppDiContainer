@@ -23,4 +23,9 @@ namespace Bootstrap {
 
 		return instance;
 	}
+
+	void DiSingleton::PrintConfig(std::ostream& os) const
+	{
+		os << "Singleton";
+	}
 }

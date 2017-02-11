@@ -1,6 +1,5 @@
 #include "DiContainer.h"
 
-
 using namespace Common::Logging;
 
 
@@ -22,5 +21,15 @@ namespace Bootstrap {
 	{
 		std::type_index type(sharedPtrType);
 		items.insert(ItemMap::value_type(type, item));
+	}
+
+
+	std::ostream& operator<< (std::ostream& os, DiContainer const & container)
+	{
+		for (auto pair : container.items)
+		{
+			os << Util::ClassName(pair.first) << " : " << *pair.second << std::endl;
+		}
+		return os;
 	}
 }

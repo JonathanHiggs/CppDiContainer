@@ -165,6 +165,7 @@
     <ClCompile Include="Common\Logging\LoggingService.cpp" />
     <ClCompile Include="Common\Logging\StreamHandler.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Util\types.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bootstrap\DiContainer.h" />
@@ -187,6 +188,7 @@
     <ClInclude Include="Common\Service\ServiceB.h" />
     <ClInclude Include="Common\Service\ServiceBase.h" />
     <ClInclude Include="Util\memory.h" />
+    <ClInclude Include="Util\types.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

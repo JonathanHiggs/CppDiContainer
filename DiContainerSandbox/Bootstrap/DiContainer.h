@@ -4,8 +4,8 @@
 #include <typeindex>
 #include <unordered_map>
 
+#include "Util\types.h"
 #include "Common\logging.h"
-
 #include "DiResult.h"
 #include "DiSingleton.h"
 #include "IRegistrar.h"
@@ -19,6 +19,8 @@ namespace Bootstrap {
 	public:
 		DiContainer(Common::Logging::LoggerCPtr logger);
 		~DiContainer() {};
+
+		friend std::ostream& operator<< (std::ostream& os, DiContainer const & container);
 
 	private:
 		typedef std::unordered_map<std::type_index, std::shared_ptr<IDiItem>> ItemMap;

@@ -47,6 +47,8 @@ int main()
 	auto loggingService = setup_logging();
 	auto container = bootstrap(loggingService);
 
+	std::cout << container;
+
 	auto loggingService2 = container.Resolve<LoggingService>();
 
 	auto serviceA = container.Resolve<ServiceA>();
