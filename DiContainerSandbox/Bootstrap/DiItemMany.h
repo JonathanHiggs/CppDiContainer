@@ -10,7 +10,8 @@ namespace Bootstrap {
 	class DiItemMany : public IDiItem
 	{
 	public:
-		DiItemMany(DiCreates::Constructor create);
+		DiItemMany(const DiCreates::Constructor & create);
+		DiItemMany(DiCreates::Constructor&& create);
 
 		virtual ~DiItemMany() {};
 
@@ -23,4 +24,7 @@ namespace Bootstrap {
 		const DiCreates::Constructor create;
 	};
 
+
+	using DiItemManyPtr = std::shared_ptr<DiItemMany>;
+	using DiItemManyPtrPtr = std::shared_ptr<DiItemManyPtr>;
 }

@@ -17,6 +17,8 @@ namespace Bootstrap {
 				
 		virtual DiResult Resolve(IResolver & resolver);
 
+		const DiCreates::Constructor & GetCreate() const;
+
 	protected:
 		virtual void PrintConfig(std::ostream& os) const;
 
@@ -26,4 +28,6 @@ namespace Bootstrap {
 		DiResult instance;
 	};
 
+	using DiItemSinglePtr = std::shared_ptr<DiItemSingle>;
+	using DiItemSinglePtrPtr = std::shared_ptr<DiItemSinglePtr>;
 }

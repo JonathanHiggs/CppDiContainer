@@ -35,7 +35,7 @@ DiContainer bootstrap(shared_ptr<LoggingService> loggingService)
 
 	container.Register<DiContainer>(make_shared<DiContainer>(container));
 	container.Register<LoggingService>(loggingService);
-	container.Register<ServiceA>([](IResolver & r) { return make_shared<ServiceA>(r.Resolve<LoggingService>()->GetLogger("ServiceA")); });
+	container.Register<ServiceA>([](IResolver & r) { return make_shared<ServiceA>(r.Resolve<LoggingService>()->GetLogger("ServiceA")); }).AsMany();
 	container.Register<ServiceB>([](IResolver & r) { return make_shared<ServiceB>(r.Resolve<LoggingService>()->GetLogger("ServiceB")); });
 
 	return container;
@@ -54,6 +54,17 @@ int main()
 	auto serviceA = container.Resolve<ServiceA>();
 	serviceA->Init();
 
+	auto serviceA2 = container.Resolve<ServiceA>();
+	serviceA2->Init();
+	
 	auto serviceB = container.Resolve<ServiceB>();
 	serviceB->Init();
+
+	auto serviceB2 = container.Resolve<ServiceB>();
+	serviceB2->Init();
+
+	std::cout << "ServiceA  " << serviceA.get() << std::endl;
+	std::cout << "ServiceA2 " << serviceA2.get() << std::endl;
+	std::cout << "ServiceB  " << serviceB.get() << std::endl;
+	std::cout << "ServiceB2 " << serviceB2.get() << std::endl;
 }

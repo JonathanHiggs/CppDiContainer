@@ -17,10 +17,12 @@ namespace Bootstrap {
 	}
 
 
-	void DiContainer::RegisterAs(std::type_info const & sharedPtrType, DiItemPtr const & item)
+	DiItemPtrPtr DiContainer::RegisterAs(std::type_info const & sharedPtrType, DiItemPtr const & item)
 	{
 		std::type_index type(sharedPtrType);
-		items.insert(ItemMap::value_type(type, std::make_shared<DiItemPtr>(item)));
+		DiItemPtrPtr itemPtr = std::make_shared<DiItemPtr>(item);
+		items.insert(ItemMap::value_type(type, itemPtr));
+		return itemPtr;
 	}
 
 
@@ -28,7 +30,7 @@ namespace Bootstrap {
 	{
 		for (auto pair : container.items)
 		{
-			os << Util::ClassName(pair.first) << " : " << *pair.second << std::endl;
+			os << Util::ClassName(pair.first) << " : " << (*pair.second.get()->get()) << std::endl;
 		}
 		return os;
 	}

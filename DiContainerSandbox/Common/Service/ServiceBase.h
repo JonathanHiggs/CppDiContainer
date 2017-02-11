@@ -13,14 +13,30 @@ namespace Service {
 	{
 	public:
 		ServiceBase(Common::Logging::LoggerCPtr logger)
-			: logger(logger)
+			: logger(logger), initted(false)
 		{ };
 
 		~ServiceBase() {};
 
-		virtual void Init() = 0;
+		void Init()
+		{
+			if (!initted)
+			{
+				OnInit();
+				initted = true;
+			}
+			else
+			{
+				logger->Info("Already initted");
+			}
+		}
 
 	protected:
+		virtual void OnInit() = 0;
+
 		Common::Logging::LoggerCPtr logger;
+
+	private:
+		bool initted;
 	};
 }

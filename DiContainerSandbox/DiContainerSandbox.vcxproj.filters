@@ -49,6 +49,9 @@
     <ClCompile Include="Bootstrap\DiItemSingle.cpp">
       <Filter>Source Files\Bootstrap</Filter>
     </ClCompile>
+    <ClCompile Include="Bootstrap\IDiItemConfig.cpp">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\Logging\ILogHandler.h">
@@ -115,6 +118,12 @@
       <Filter>Source Files\Bootstrap</Filter>
     </ClInclude>
     <ClInclude Include="Bootstrap\DiItemSingle.h">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\IDiItemConfig.h">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\DiItemSingleConfig.h">
       <Filter>Source Files\Bootstrap</Filter>
     </ClInclude>
   </ItemGroup>

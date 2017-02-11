@@ -24,8 +24,15 @@ namespace Bootstrap {
 		return instance;
 	}
 
+
+	const DiCreates::Constructor & DiItemSingle::GetCreate() const
+	{
+		return create;
+	}
+
+
 	void DiItemSingle::PrintConfig(std::ostream& os) const
 	{
-		os << "Singleton";
+		os << "Single instance mapping";
 	}
 }

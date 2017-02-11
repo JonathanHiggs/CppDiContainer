@@ -8,6 +8,7 @@
 #include "Common\logging.h"
 #include "Bootstrap\IDiItem.h"
 #include "Bootstrap\DiItemSingle.h"
+#include "Bootstrap\DiItemSingleConfig.h"
 
 
 namespace Bootstrap {
@@ -24,13 +25,16 @@ namespace Bootstrap {
 
 
 		template<class T>
-		void Register(DiCreates::Constructor const & create)
+		DiItemSingleConfig Register(DiCreates::Constructor const & create)
 		{
 			std::stringstream message;
 			message << "Registering " << Util::ClassName<T>();
 			logger->Info(message.str());
 
-			RegisterAs(typeid(T), std::make_shared<DiItemSingle>(create));
+			auto item = std::make_shared<DiItemSingle>(create);
+			auto itemPtr = RegisterAs(typeid(T), item);
+
+			return DiItemSingleConfig(item, itemPtr);
 		};
 
 
@@ -44,7 +48,7 @@ namespace Bootstrap {
 			message << " as " << Util::ClassName<TAs>();
 			logger->Info(message.str());
 
-			RegisterAs(typeid(TAs), [=](IResolver & r) { return create(r); });
+			auto item = RegisterAs(typeid(TAs), [=](IResolver & r) { return create(r); });
 		}
 
 
@@ -55,12 +59,12 @@ namespace Bootstrap {
 			message << "Registering instance " << Util::ClassName<T>();
 			logger->Info(message.str());
 
-			RegisterAs(typeid(T), std::make_shared<DiItemSingle>(DiResult(instance)));
+			auto item = RegisterAs(typeid(T), std::make_shared<DiItemSingle>(DiResult(instance)));
 		}
 
 
 	protected:
-		virtual void RegisterAs(
+		virtual DiItemPtrPtr RegisterAs(
 			std::type_info const & sharedPtrType,
 			std::shared_ptr<IDiItem> const & item
 		) = 0;

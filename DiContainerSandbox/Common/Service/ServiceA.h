@@ -15,7 +15,7 @@ namespace Service {
 
 		~ServiceA() {};
 
-		virtual void Init()
+		virtual void OnInit()
 		{
 			logger->Info("Init ServiceA");
 		};

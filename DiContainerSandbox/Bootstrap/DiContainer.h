@@ -30,7 +30,7 @@ namespace Bootstrap {
 		virtual DiResult ResolveAs(std::type_info const & sharedPtrType);
 
 		// IRegistrar
-		virtual void RegisterAs(
+		virtual DiItemPtrPtr RegisterAs(
 			std::type_info const & sharedPtrType,
 			DiItemPtr const & item
 		);
