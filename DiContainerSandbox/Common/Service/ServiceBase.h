@@ -1,9 +1,10 @@
 #pragma once
 
 
-#include "Common\logging.h"
 #include <memory>
 #include <string>
+
+#include "Common\logging.h"
 
 
 namespace Service {

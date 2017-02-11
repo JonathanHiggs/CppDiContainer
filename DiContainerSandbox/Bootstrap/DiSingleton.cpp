@@ -1,4 +1,4 @@
-#include "DiSingleton.h"
+#include "Bootstrap\DiSingleton.h"
 
 
 namespace Bootstrap {

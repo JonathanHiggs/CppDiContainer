@@ -6,7 +6,7 @@
 
 #include "Util\memory.h"
 
-#include "LogLevel.h"
+#include "Common\Logging\LogLevel.h"
 
 
 namespace Common {

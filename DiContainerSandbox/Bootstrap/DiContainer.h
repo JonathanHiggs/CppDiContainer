@@ -6,10 +6,10 @@
 
 #include "Util\types.h"
 #include "Common\logging.h"
-#include "DiResult.h"
-#include "DiSingleton.h"
-#include "IRegistrar.h"
-#include "IResolver.h"
+#include "Bootstrap\DiResult.h"
+#include "Bootstrap\DiSingleton.h"
+#include "Bootstrap\IRegistrar.h"
+#include "Bootstrap\IResolver.h"
 
 
 namespace Bootstrap {

@@ -4,7 +4,7 @@
 #include <memory>
 #include <string>
 
-#include "LoggingService.h"
+#include "Common\Logging\LoggingService.h"
 
 
 namespace Common {

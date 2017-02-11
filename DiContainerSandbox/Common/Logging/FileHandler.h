@@ -4,8 +4,8 @@
 #include <fstream>
 #include <string>
 
-#include "ILogHandler.h"
-#include "ILogFormatter.h"
+#include "Common\Logging\ILogHandler.h"
+#include "Common\Logging\ILogFormatter.h"
 
 
 namespace Common {

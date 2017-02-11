@@ -6,8 +6,8 @@
 #include <vector>
 
 #include "Util\memory.h"
-#include "LogLevel.h"
-#include "ILogHandler.h"
+#include "Common\Logging\LogLevel.h"
+#include "Common\Logging\ILogHandler.h"
 
 
 namespace Common {

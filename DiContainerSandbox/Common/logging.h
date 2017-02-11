@@ -1,8 +1,8 @@
 #pragma once
 
 
-#include "Logging\LogFormatter.h"
-#include "Logging\FileHandler.h"
-#include "Logging\StreamHandler.h"
-#include "Logging\LoggingService.h"
-#include "Logging\Logger.h"
+#include "Common\Logging\LogFormatter.h"
+#include "Common\Logging\FileHandler.h"
+#include "Common\Logging\StreamHandler.h"
+#include "Common\Logging\LoggingService.h"
+#include "Common\Logging\Logger.h"

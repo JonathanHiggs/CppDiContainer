@@ -4,8 +4,8 @@
 #include <functional>
 #include <memory>
 
-#include "DiResult.h"
-#include "IResolver.h"
+#include "Bootstrap\DiResult.h"
+#include "Bootstrap\IResolver.h"
 
 
 namespace Bootstrap {

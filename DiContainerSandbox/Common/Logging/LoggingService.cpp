@@ -1,5 +1,5 @@
-#include "LoggingService.h"
-#include "Logger.h"
+#include "Common\Logging\LoggingService.h"
+#include "Common\Logging\Logger.h"
 
 
 using namespace std;

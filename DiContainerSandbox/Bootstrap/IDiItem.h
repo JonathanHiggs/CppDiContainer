@@ -1,8 +1,8 @@
 #pragma once
 
 
-#include "IResolver.h"
-#include "DiResult.h"
+#include "Bootstrap\IResolver.h"
+#include "Bootstrap\DiResult.h"
 
 
 namespace Bootstrap {

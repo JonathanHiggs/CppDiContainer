@@ -3,8 +3,8 @@
 
 #include <typeinfo>
 
-#include "DiSingleton.h"
-#include "DiResult.h"
+#include "Bootstrap\DiSingleton.h"
+#include "Bootstrap\DiResult.h"
 
 
 namespace Bootstrap {

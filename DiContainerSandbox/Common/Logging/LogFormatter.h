@@ -5,7 +5,7 @@
 #include <sstream>
 #include <ctime>
 
-#include "ILogFormatter.h"
+#include "Common\Logging\ILogFormatter.h"
 
 
 namespace Common {
