@@ -4,6 +4,7 @@
 #include <typeindex>
 #include <unordered_map>
 
+#include "Util\memory.h"
 #include "Util\types.h"
 #include "Common\logging.h"
 #include "Bootstrap\DiResult.h"
@@ -20,6 +21,8 @@ namespace Bootstrap {
 		DiContainer(Common::Logging::LoggerCPtr logger);
 		~DiContainer() {};
 
+		void LogMappings();
+
 		friend std::ostream& operator<< (std::ostream& os, DiContainer const & container);
 
 	private:
@@ -35,5 +38,8 @@ namespace Bootstrap {
 			DiItemPtr const & item
 		);
 	};
+
+
+	DECLARE_POINTERS(DiContainer);
 
 }

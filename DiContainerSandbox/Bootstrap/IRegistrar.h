@@ -69,9 +69,7 @@ namespace Bootstrap {
 			std::shared_ptr<IDiItem> const & item
 		) = 0;
 
-
-	private:
-		Common::Logging::LoggerCPtr logger;
+		const Common::Logging::LoggerCPtr logger;
 	};
 
 }

@@ -1,4 +1,5 @@
 #include "Bootstrap\DiContainer.h"
+#include <sstream>
 
 using namespace Common::Logging;
 
@@ -23,6 +24,18 @@ namespace Bootstrap {
 		DiItemPtrPtr itemPtr = std::make_shared<DiItemPtr>(item);
 		items.insert(ItemMap::value_type(type, itemPtr));
 		return itemPtr;
+	}
+
+
+	void DiContainer::LogMappings()
+	{
+		logger->Info("Mappings table");
+		for (auto pair : items)
+		{
+			std::stringstream line;
+			line << ">> " << Util::ClassName(pair.first) << " : " << (*pair.second.get()->get());
+			logger->Info(line.str());
+		}
 	}
 
 

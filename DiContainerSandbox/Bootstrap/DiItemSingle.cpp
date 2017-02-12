@@ -34,5 +34,7 @@ namespace Bootstrap {
 	void DiItemSingle::PrintConfig(std::ostream& os) const
 	{
 		os << "Single instance mapping";
+		if (created)
+			os << " (created)";
 	}
 }
