@@ -2,39 +2,42 @@
 
 
 namespace Bootstrap {
+	namespace DiItems {
 
-	DiItemSingle::DiItemSingle(DiCreates::Constructor create)
-		: create(create), created(false)
-	{}
-
-
-	DiItemSingle::DiItemSingle(DiResult instance)
-		: instance(instance), created(true)
-	{}
+		DiItemSingle::DiItemSingle(DiCreates::Constructor create)
+			: create(create), created(false)
+		{}
 
 
-	DiResult DiItemSingle::Resolve(IResolver & resolver)
-	{
-		if (!created)
+		DiItemSingle::DiItemSingle(DiResult result)
+			: result(result), created(true)
+		{}
+
+
+		DiResult DiItemSingle::Resolve(IResolver & resolver)
 		{
-			instance = create(resolver);
-			created = true;
+			if (!created)
+			{
+				result = create(resolver);
+				created = true;
+			}
+
+			return result;
 		}
 
-		return instance;
-	}
+
+		const DiCreates::Constructor & DiItemSingle::GetCreate() const
+		{
+			return create;
+		}
 
 
-	const DiCreates::Constructor & DiItemSingle::GetCreate() const
-	{
-		return create;
-	}
+		void DiItemSingle::PrintConfig(std::ostream& os) const
+		{
+			os << "Single result mapping";
+			if (created)
+				os << " (created)";
+		}
 
-
-	void DiItemSingle::PrintConfig(std::ostream& os) const
-	{
-		os << "Single instance mapping";
-		if (created)
-			os << " (created)";
 	}
 }

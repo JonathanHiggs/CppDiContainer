@@ -129,5 +129,8 @@
     <ClInclude Include="Bootstrap\DiItems\IDiItemConfig.h">
       <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClInclude>
+    <ClInclude Include="Bootstrap\DiItems\DiItemManyConfig.h">
+      <Filter>Source Files\Bootstrap\DiItems</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -26,16 +26,16 @@ namespace Bootstrap {
 		friend std::ostream& operator<< (std::ostream& os, DiContainer const & container);
 
 	private:
-		typedef std::unordered_map<std::type_index, DiItemPtrPtr> ItemMap;
+		typedef std::unordered_map<std::type_index, DiItems::DiItemPtrPtr> ItemMap;
 		ItemMap items;
 
 		// IResolver
 		virtual DiResult ResolveAs(std::type_info const & sharedPtrType);
 
 		// IRegistrar
-		virtual DiItemPtrPtr RegisterAs(
+		virtual DiItems::DiItemPtrPtr RegisterAs(
 			std::type_info const & sharedPtrType,
-			DiItemPtr const & item
+			DiItems::DiItemPtr const & item
 		);
 	};
 

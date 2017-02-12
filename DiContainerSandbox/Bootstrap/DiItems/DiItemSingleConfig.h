@@ -7,23 +7,25 @@
 
 
 namespace Bootstrap {
+	namespace DiItems {
 
-	class DiItemSingleConfig : public IDiItemConfig
-	{
-	public:
-		DiItemSingleConfig(DiItemSinglePtr singleItem, DiItemPtrPtr item)
-			: IDiItemConfig(item), singleItem(singleItem)
-		{};
-
-		void AsMany()
+		class DiItemSingleConfig : public IDiItemConfig
 		{
-			DiItemMany newItem(singleItem->GetCreate());
-			DiItemPtr newItemPtr = std::make_shared<DiItemMany>(newItem);
-			Swap(newItemPtr);
-		}
+		public:
+			DiItemSingleConfig(DiItemSinglePtr singleItemPtr, DiItemPtrPtr itemPtr)
+				: IDiItemConfig(itemPtr), singleItemPtr(singleItemPtr)
+			{};
 
-	private:
-		DiItemSinglePtr singleItem;
-	};
+			void AsMany()
+			{
+				DiItemMany newItem(singleItemPtr->GetCreate());
+				DiItemPtr newItemPtr = std::make_shared<DiItemMany>(newItem);
+				Swap(newItemPtr);
+			};
 
+		private:
+			DiItemSinglePtr singleItemPtr;
+		};
+
+	}
 }

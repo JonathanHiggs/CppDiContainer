@@ -2,15 +2,12 @@
 
 
 namespace Bootstrap{
+	namespace DiItems {
 
-	void IDiItemConfig::Swap(DiItemPtr newItem)
-	{
-		(*item.get()).swap(newItem);
-	}
+		void IDiItemConfig::Swap(DiItemPtr newItem)
+		{
+			(*item.get()).swap(newItem);
+		}
 
-
-	const IDiItem & IDiItemConfig::Current() const
-	{
-		return (*item.get()->get());
 	}
 }

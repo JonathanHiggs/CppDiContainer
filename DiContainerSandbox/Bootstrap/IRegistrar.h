@@ -25,16 +25,16 @@ namespace Bootstrap {
 
 
 		template<class T>
-		DiItemSingleConfig Register(DiCreates::Constructor const & create)
+		DiItems::DiItemSingleConfig Register(DiCreates::Constructor const & create)
 		{
 			std::stringstream message;
 			message << "Registering " << Util::ClassName<T>();
 			logger->Info(message.str());
 
-			auto item = std::make_shared<DiItemSingle>(create);
+			auto item = std::make_shared<DiItems::DiItemSingle>(create);
 			auto itemPtr = RegisterAs(typeid(T), item);
 
-			return DiItemSingleConfig(item, itemPtr);
+			return DiItems::DiItemSingleConfig(item, itemPtr);
 		};
 
 
@@ -59,14 +59,14 @@ namespace Bootstrap {
 			message << "Registering instance " << Util::ClassName<T>();
 			logger->Info(message.str());
 
-			auto item = RegisterAs(typeid(T), std::make_shared<DiItemSingle>(DiResult(instance)));
+			auto item = RegisterAs(typeid(T), std::make_shared<DiItems::DiItemSingle>(DiResult(instance)));
 		}
 
 
 	protected:
-		virtual DiItemPtrPtr RegisterAs(
+		virtual DiItems::DiItemPtrPtr RegisterAs(
 			std::type_info const & sharedPtrType,
-			std::shared_ptr<IDiItem> const & item
+			std::shared_ptr<DiItems::IDiItem> const & item
 		) = 0;
 
 		const Common::Logging::LoggerCPtr logger;

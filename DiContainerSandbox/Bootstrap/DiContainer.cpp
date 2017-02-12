@@ -2,7 +2,7 @@
 #include <sstream>
 
 using namespace Common::Logging;
-
+using namespace Bootstrap::DiItems;
 
 namespace Bootstrap {
 

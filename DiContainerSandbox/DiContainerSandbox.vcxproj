@@ -173,6 +173,7 @@
     <ClInclude Include="Bootstrap\DiContainer.h" />
     <ClInclude Include="Bootstrap\DiCreate.h" />
     <ClInclude Include="Bootstrap\DiItems\DiItemMany.h" />
+    <ClInclude Include="Bootstrap\DiItems\DiItemManyConfig.h" />
     <ClInclude Include="Bootstrap\DiItems\DiItemSingle.h" />
     <ClInclude Include="Bootstrap\DiItems\DiItemSingleConfig.h" />
     <ClInclude Include="Bootstrap\DiItems\IDiItem.h" />
