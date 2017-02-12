@@ -25,6 +25,16 @@ namespace Common {
 				serviceC->Init();
 			}
 
+
+			static std::shared_ptr<ServiceD> DiCreate(Bootstrap::IResolver & r)
+			{
+				return std::make_shared<ServiceD>(
+					r.Resolve<ServiceB>(),
+					r.Resolve<ServiceC>(),
+					r.Resolve<Common::Logging::LoggingService>()->GetLogger("ServiceD")
+					);
+			}
+
 		private:
 			ServiceBPtr serviceB;
 			ServiceCPtr serviceC;

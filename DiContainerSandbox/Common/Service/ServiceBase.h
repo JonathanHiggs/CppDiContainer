@@ -5,6 +5,7 @@
 #include <string>
 
 #include "Common\logging.h"
+#include "Bootstrap\IResolver.h"
 
 
 namespace Common {

@@ -14,6 +14,9 @@ using namespace Common::Logging;
 using namespace Common::Service;
 
 
+/* Adapted from: http://turncoder.blogspot.co.uk/2014/02/a-simple-c11-ioc-container-thats-all.html */
+
+
 LoggingServicePtr setup_logging()
 {
 	auto loggingService = make_shared<LoggingService>();
@@ -36,10 +39,10 @@ DiContainerPtr bootstrap(LoggingServicePtr loggingService)
 	
 	container->Register<DiContainer>(container);
 	container->Register<LoggingService>(loggingService);
-	container->Register<ServiceA>([](IResolver & r) { return make_shared<ServiceA>(r.Resolve<LoggingService>()->GetLogger("ServiceA")); }).AsMany();
-	container->Register<ServiceB>([](IResolver & r) { return make_shared<ServiceB>(r.Resolve<LoggingService>()->GetLogger("ServiceB")); }).AsSinglePerGraph();
-	container->Register<ServiceC>([](IResolver & r) { return make_shared<ServiceC>(r.Resolve<ServiceB>(), r.Resolve<LoggingService>()->GetLogger("ServiceC")); });
-	container->Register<ServiceD>([](IResolver & r) { return make_shared<ServiceD>(r.Resolve<ServiceB>(), r.Resolve<ServiceC>(), r.Resolve<LoggingService>()->GetLogger("ServiceD")); });
+	container->Register<ServiceA>(ServiceA::DiCreate).AsMany();
+	container->Register<ServiceB>(ServiceB::DiCreate).AsSinglePerGraph();
+	container->Register<ServiceC>(ServiceC::DiCreate);
+	container->Register<ServiceD>(ServiceD::DiCreate);
 
 	return container;
 }

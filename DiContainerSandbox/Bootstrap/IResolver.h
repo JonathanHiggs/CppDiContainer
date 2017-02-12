@@ -22,4 +22,6 @@ namespace Bootstrap {
 	protected:
 		virtual DiResult ResolveAs(std::type_info const & sharedPtrType) = 0;
 	};
+
+
 }

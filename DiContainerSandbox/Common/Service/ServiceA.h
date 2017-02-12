@@ -20,10 +20,15 @@ namespace Common {
 			{
 				logger->Info("Init ServiceA");
 			};
+
+			static std::shared_ptr<ServiceA> DiCreate(Bootstrap::IResolver & r)
+			{
+				return std::make_shared<ServiceA>(r.Resolve<Common::Logging::LoggingService>()->GetLogger("ServiceA"));
+			}
 		};
 
 		DECLARE_POINTERS(ServiceA);
-
+		
 	}
 }
 
