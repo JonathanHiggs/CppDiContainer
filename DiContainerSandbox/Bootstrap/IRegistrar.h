@@ -6,9 +6,9 @@
 
 #include "Util\types.h"
 #include "Common\logging.h"
-#include "Bootstrap\IDiItem.h"
-#include "Bootstrap\DiItemSingle.h"
-#include "Bootstrap\DiItemSingleConfig.h"
+#include "Bootstrap\DiItems\IDiItem.h"
+#include "Bootstrap\DiItems\DiItemSingle.h"
+#include "Bootstrap\DiItems\DiItemSingleConfig.h"
 
 
 namespace Bootstrap {

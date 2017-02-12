@@ -1,9 +1,9 @@
 #pragma once
 
 
-#include "Bootstrap\DiItemSingle.h"
-#include "Bootstrap\DiItemMany.h"
-#include "Bootstrap\IDiItemConfig.h"
+#include "Bootstrap\DiItems\DiItemSingle.h"
+#include "Bootstrap\DiItems\DiItemMany.h"
+#include "Bootstrap\DiItems\IDiItemConfig.h"
 
 
 namespace Bootstrap {

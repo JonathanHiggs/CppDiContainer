@@ -159,9 +159,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bootstrap\DiContainer.cpp" />
-    <ClCompile Include="Bootstrap\DiItemMany.cpp" />
-    <ClCompile Include="Bootstrap\DiItemSingle.cpp" />
-    <ClCompile Include="Bootstrap\IDiItemConfig.cpp" />
+    <ClCompile Include="Bootstrap\DiItems\DiItemMany.cpp" />
+    <ClCompile Include="Bootstrap\DiItems\DiItemSingle.cpp" />
+    <ClCompile Include="Bootstrap\DiItems\IDiItemConfig.cpp" />
     <ClCompile Include="Common\Logging\FileHandler.cpp" />
     <ClCompile Include="Common\Logging\Logger.cpp" />
     <ClCompile Include="Common\Logging\LoggingService.cpp" />
@@ -172,12 +172,12 @@
   <ItemGroup>
     <ClInclude Include="Bootstrap\DiContainer.h" />
     <ClInclude Include="Bootstrap\DiCreate.h" />
-    <ClInclude Include="Bootstrap\DiItemMany.h" />
-    <ClInclude Include="Bootstrap\DiItemSingle.h" />
-    <ClInclude Include="Bootstrap\DiItemSingleConfig.h" />
+    <ClInclude Include="Bootstrap\DiItems\DiItemMany.h" />
+    <ClInclude Include="Bootstrap\DiItems\DiItemSingle.h" />
+    <ClInclude Include="Bootstrap\DiItems\DiItemSingleConfig.h" />
+    <ClInclude Include="Bootstrap\DiItems\IDiItem.h" />
+    <ClInclude Include="Bootstrap\DiItems\IDiItemConfig.h" />
     <ClInclude Include="Bootstrap\DiResult.h" />
-    <ClInclude Include="Bootstrap\IDiItem.h" />
-    <ClInclude Include="Bootstrap\IDiItemConfig.h" />
     <ClInclude Include="Bootstrap\IRegistrar.h" />
     <ClInclude Include="Bootstrap\IResolver.h" />
     <ClInclude Include="Common\logging.h" />

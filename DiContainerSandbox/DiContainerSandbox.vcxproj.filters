@@ -20,6 +20,9 @@
     <Filter Include="Source Files\Bootstrap">
       <UniqueIdentifier>{2bd9cfba-6671-41f4-a11a-597a7142e852}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Bootstrap\DiItems">
+      <UniqueIdentifier>{a9da0842-c911-4bc2-be6e-f90677e053c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -43,14 +46,14 @@
     <ClCompile Include="Util\types.cpp">
       <Filter>Source Files\Util</Filter>
     </ClCompile>
-    <ClCompile Include="Bootstrap\DiItemMany.cpp">
-      <Filter>Source Files\Bootstrap</Filter>
+    <ClCompile Include="Bootstrap\DiItems\DiItemMany.cpp">
+      <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClCompile>
-    <ClCompile Include="Bootstrap\DiItemSingle.cpp">
-      <Filter>Source Files\Bootstrap</Filter>
+    <ClCompile Include="Bootstrap\DiItems\DiItemSingle.cpp">
+      <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClCompile>
-    <ClCompile Include="Bootstrap\IDiItemConfig.cpp">
-      <Filter>Source Files\Bootstrap</Filter>
+    <ClCompile Include="Bootstrap\DiItems\IDiItemConfig.cpp">
+      <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -108,23 +111,23 @@
     <ClInclude Include="Bootstrap\IResolver.h">
       <Filter>Source Files\Bootstrap</Filter>
     </ClInclude>
-    <ClInclude Include="Bootstrap\IDiItem.h">
-      <Filter>Source Files\Bootstrap</Filter>
-    </ClInclude>
     <ClInclude Include="Util\types.h">
       <Filter>Source Files\Util</Filter>
     </ClInclude>
-    <ClInclude Include="Bootstrap\DiItemMany.h">
-      <Filter>Source Files\Bootstrap</Filter>
+    <ClInclude Include="Bootstrap\DiItems\DiItemMany.h">
+      <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClInclude>
-    <ClInclude Include="Bootstrap\DiItemSingle.h">
-      <Filter>Source Files\Bootstrap</Filter>
+    <ClInclude Include="Bootstrap\DiItems\DiItemSingle.h">
+      <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClInclude>
-    <ClInclude Include="Bootstrap\IDiItemConfig.h">
-      <Filter>Source Files\Bootstrap</Filter>
+    <ClInclude Include="Bootstrap\DiItems\DiItemSingleConfig.h">
+      <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClInclude>
-    <ClInclude Include="Bootstrap\DiItemSingleConfig.h">
-      <Filter>Source Files\Bootstrap</Filter>
+    <ClInclude Include="Bootstrap\DiItems\IDiItem.h">
+      <Filter>Source Files\Bootstrap\DiItems</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\DiItems\IDiItemConfig.h">
+      <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

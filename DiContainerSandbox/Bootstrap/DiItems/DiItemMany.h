@@ -2,7 +2,7 @@
 
 
 #include "Bootstrap\DiCreate.h"
-#include "Bootstrap\IDiItem.h"
+#include "Bootstrap\DiItems\IDiItem.h"
 
 
 namespace Bootstrap {

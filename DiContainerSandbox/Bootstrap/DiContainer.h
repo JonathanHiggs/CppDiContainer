@@ -8,7 +8,7 @@
 #include "Util\types.h"
 #include "Common\logging.h"
 #include "Bootstrap\DiResult.h"
-#include "Bootstrap\DiItemSingle.h"
+#include "Bootstrap\DiItems\DiItemSingle.h"
 #include "Bootstrap\IRegistrar.h"
 #include "Bootstrap\IResolver.h"
 

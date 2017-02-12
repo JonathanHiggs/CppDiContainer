@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "Bootstrap\IDiItem.h"
+#include "Bootstrap\DiItems\IDiItem.h"
 
 
 namespace Bootstrap {

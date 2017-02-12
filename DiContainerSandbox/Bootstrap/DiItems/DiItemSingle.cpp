@@ -1,4 +1,4 @@
-#include "Bootstrap\DiItemSingle.h"
+#include "Bootstrap\DiItems\DiItemSingle.h"
 
 
 namespace Bootstrap {

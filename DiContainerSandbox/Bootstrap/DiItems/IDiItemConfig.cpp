@@ -1,4 +1,4 @@
-#include "Bootstrap\IDiItemConfig.h"
+#include "Bootstrap\DiItems\IDiItemConfig.h"
 
 
 namespace Bootstrap{
