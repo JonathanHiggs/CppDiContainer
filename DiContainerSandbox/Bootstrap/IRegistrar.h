@@ -9,6 +9,7 @@
 #include "Bootstrap\DiItems\IDiItem.h"
 #include "Bootstrap\DiItems\DiItemSingle.h"
 #include "Bootstrap\DiItems\DiItemSingleConfig.h"
+#include "Bootstrap\DiItems\DiItemSingleExisting.h"
 
 
 namespace Bootstrap {
@@ -59,7 +60,7 @@ namespace Bootstrap {
 			message << "Registering instance " << Util::ClassName<T>();
 			logger->Info(message.str());
 
-			auto item = RegisterAs(typeid(T), std::make_shared<DiItems::DiItemSingle>(DiResult(instance)));
+			auto item = RegisterAs(typeid(T), std::make_shared<DiItems::DiItemSingleExisting>(DiResult(instance)));
 		}
 
 

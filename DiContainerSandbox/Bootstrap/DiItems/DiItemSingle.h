@@ -12,11 +12,11 @@ namespace Bootstrap {
 		{
 		public:
 			DiItemSingle(DiCreates::Constructor create);
-			DiItemSingle(DiResult result);
 
 			virtual ~DiItemSingle() {};
 
 			virtual DiResult Resolve(IResolver & resolver);
+			bool IsCreated() const;
 
 			const DiCreates::Constructor & GetCreate() const;
 
@@ -30,7 +30,6 @@ namespace Bootstrap {
 		};
 
 		using DiItemSinglePtr = std::shared_ptr<DiItemSingle>;
-		using DiItemSinglePtrPtr = std::shared_ptr<DiItemSinglePtr>;
 
 	}
 }

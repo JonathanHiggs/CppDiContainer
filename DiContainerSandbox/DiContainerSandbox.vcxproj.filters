@@ -55,6 +55,9 @@
     <ClCompile Include="Bootstrap\DiItems\IDiItemConfig.cpp">
       <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClCompile>
+    <ClCompile Include="Bootstrap\DiItems\DiItemSingleExisting.cpp">
+      <Filter>Source Files\Bootstrap\DiItems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\Logging\ILogHandler.h">
@@ -130,6 +133,9 @@
       <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClInclude>
     <ClInclude Include="Bootstrap\DiItems\DiItemManyConfig.h">
+      <Filter>Source Files\Bootstrap\DiItems</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\DiItems\DiItemSingleExisting.h">
       <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClInclude>
   </ItemGroup>

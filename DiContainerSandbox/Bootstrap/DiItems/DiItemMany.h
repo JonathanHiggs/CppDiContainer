@@ -27,9 +27,7 @@ namespace Bootstrap {
 			const DiCreates::Constructor create;
 		};
 
-
 		using DiItemManyPtr = std::shared_ptr<DiItemMany>;
-		using DiItemManyPtrPtr = std::shared_ptr<DiItemManyPtr>;
 
 	}
 }

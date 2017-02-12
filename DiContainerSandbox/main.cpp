@@ -48,26 +48,11 @@ int main()
 	auto container = bootstrap(loggingService);
 	container->LogMappings();
 
-	auto container2 = container->Resolve<DiContainer>();
-	std::cout << "Container  " << container.get() << std::endl;
-	std::cout << "Container2 " << container2.get() << std::endl;
-
 	auto loggingService2 = container->Resolve<LoggingService>();
 
 	auto serviceA = container->Resolve<ServiceA>();
 	serviceA->Init();
-
-	auto serviceA2 = container->Resolve<ServiceA>();
-	serviceA2->Init();
 	
 	auto serviceB = container->Resolve<ServiceB>();
 	serviceB->Init();
-
-	auto serviceB2 = container->Resolve<ServiceB>();
-	serviceB2->Init();
-
-	std::cout << "ServiceA  " << serviceA.get() << std::endl;
-	std::cout << "ServiceA2 " << serviceA2.get() << std::endl;
-	std::cout << "ServiceB  " << serviceB.get() << std::endl;
-	std::cout << "ServiceB2 " << serviceB2.get() << std::endl;
 }

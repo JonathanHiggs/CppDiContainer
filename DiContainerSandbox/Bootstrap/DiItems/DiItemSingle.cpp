@@ -9,11 +9,6 @@ namespace Bootstrap {
 		{}
 
 
-		DiItemSingle::DiItemSingle(DiResult result)
-			: result(result), created(true)
-		{}
-
-
 		DiResult DiItemSingle::Resolve(IResolver & resolver)
 		{
 			if (!created)
@@ -23,6 +18,12 @@ namespace Bootstrap {
 			}
 
 			return result;
+		}
+
+
+		bool DiItemSingle::IsCreated() const
+		{
+			return created;
 		}
 
 
