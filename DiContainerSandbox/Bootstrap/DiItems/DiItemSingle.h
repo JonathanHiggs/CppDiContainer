@@ -11,7 +11,7 @@ namespace Bootstrap {
 		class DiItemSingle : public IDiItem
 		{
 		public:
-			DiItemSingle(DiCreates::Constructor create);
+			DiItemSingle(DiCreates::Constructor create, std::type_info const & type);
 
 			virtual ~DiItemSingle() {};
 

@@ -18,7 +18,7 @@ namespace Bootstrap {
 
 			void AsSingle()
 			{
-				DiItemSingle singleItem(manyItemPtr->GetCreate());
+				DiItemSingle singleItem(manyItemPtr->GetCreate(), manyItemPtr->GetType());
 				DiItemPtr newItemPtr = std::make_shared<DiItemSingle>(singleItem);
 				Swap(newItemPtr);
 			}

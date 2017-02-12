@@ -4,8 +4,8 @@
 namespace Bootstrap {
 	namespace DiItems {
 
-		DiItemSingle::DiItemSingle(DiCreates::Constructor create)
-			: create(create), created(false)
+		DiItemSingle::DiItemSingle(DiCreates::Constructor create, std::type_info const & type)
+			: IDiItem(type), create(create), created(false)
 		{}
 
 

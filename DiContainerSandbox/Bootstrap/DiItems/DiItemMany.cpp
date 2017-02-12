@@ -4,13 +4,13 @@
 namespace Bootstrap {
 	namespace DiItems {
 
-		DiItemMany::DiItemMany(const DiCreates::Constructor & create)
-			: create(create)
+		DiItemMany::DiItemMany(const DiCreates::Constructor & create, std::type_info const & type)
+			: IDiItem(type), create(create)
 		{}
 
 
-		DiItemMany::DiItemMany(DiCreates::Constructor && create)
-			: create(std::move(create))
+		DiItemMany::DiItemMany(DiCreates::Constructor && create, std::type_info const & type)
+			: IDiItem(type), create(std::move(create))
 		{}
 
 

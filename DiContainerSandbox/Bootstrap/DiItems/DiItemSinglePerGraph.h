@@ -1,6 +1,5 @@
 #pragma once
 
-
 #include "Bootstrap\DiCreate.h"
 #include "Bootstrap\DiItems\IDiItem.h"
 
@@ -8,13 +7,12 @@
 namespace Bootstrap {
 	namespace DiItems {
 
-		class DiItemMany : public IDiItem
+		class DiItemSinglePerGraph : public IDiItem
 		{
 		public:
-			DiItemMany(const DiCreates::Constructor & create, std::type_info const & type);
-			DiItemMany(DiCreates::Constructor&& create, std::type_info const & type);
+			DiItemSinglePerGraph(DiCreates::Constructor const create, std::type_info const & type);
 
-			virtual ~DiItemMany() {};
+			virtual ~DiItemSinglePerGraph() {};
 
 			virtual DiResult Resolve(IContextResolver & resolver);
 
@@ -27,7 +25,7 @@ namespace Bootstrap {
 			const DiCreates::Constructor create;
 		};
 
-		using DiItemManyPtr = std::shared_ptr<DiItemMany>;
+		DECLARE_POINTERS(DiItemSinglePerGraph);
 
 	}
 }

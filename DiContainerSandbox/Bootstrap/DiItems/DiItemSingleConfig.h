@@ -1,8 +1,9 @@
 #pragma once
 
 
-#include "Bootstrap\DiItems\DiItemSingle.h"
 #include "Bootstrap\DiItems\DiItemMany.h"
+#include "Bootstrap\DiItems\DiItemSingle.h"
+#include "Bootstrap\DiItems\DiItemSinglePerGraph.h"
 #include "Bootstrap\DiItems\IDiItemConfig.h"
 
 
@@ -18,10 +19,17 @@ namespace Bootstrap {
 
 			void AsMany()
 			{
-				DiItemMany newItem(singleItemPtr->GetCreate());
+				DiItemMany newItem(singleItemPtr->GetCreate(), singleItemPtr->GetType());
 				DiItemPtr newItemPtr = std::make_shared<DiItemMany>(newItem);
 				Swap(newItemPtr);
 			};
+
+			void AsSinglePerGraph()
+			{
+				DiItemSinglePerGraph newItem(singleItemPtr->GetCreate(), singleItemPtr->GetType());
+				DiItemPtr newItemPtr = std::make_shared<DiItemSinglePerGraph>(newItem);
+				Swap(newItemPtr);
+			}
 
 		private:
 			DiItemSinglePtr singleItemPtr;

@@ -31,7 +31,7 @@ namespace Bootstrap {
 			message << "Registering " << Util::ClassName<T>();
 			logger->Info(message.str());
 
-			auto item = std::make_shared<DiItems::DiItemSingle>(create);
+			auto item = std::make_shared<DiItems::DiItemSingle>(create, typeid(T));
 			auto itemPtr = RegisterAs(typeid(T), item);
 
 			return DiItems::DiItemSingleConfig(item, itemPtr);
@@ -39,7 +39,7 @@ namespace Bootstrap {
 
 
 		template<class TAs, class TOriginal>
-		void Register(DiCreates::Constructor const & create)
+		DiItems::DiItemSingleConfig Register(DiCreates::Constructor const & create)
 		{
 			static_assert(std::is_base_of<TAs, TOriginal>::value, "Types do not derive");
 
@@ -48,7 +48,10 @@ namespace Bootstrap {
 			message << " as " << Util::ClassName<TAs>();
 			logger->Info(message.str());
 
-			auto item = RegisterAs(typeid(TAs), [=](IResolver & r) { return create(r); });
+			auto item = std::make_shared<DiItems::DiItemSingle>([=](IResolver & r) { return create(r); }, typeid(TAs));
+			auto itemPtr = RegisterAs(typeid(TAs), item);
+
+			return DiItems::DiItemSingleConfig(item, itemPtr);
 		}
 
 
@@ -59,7 +62,8 @@ namespace Bootstrap {
 			message << "Registering instance " << Util::ClassName<T>();
 			logger->Info(message.str());
 
-			auto item = RegisterAs(typeid(T), std::make_shared<DiItems::DiItemSingleExisting>(DiResult(instance)));
+			auto item = std::make_shared<DiItems::DiItemSingleExisting>(DiResult(instance), typeid(T));
+			auto itemPtr = RegisterAs(typeid(T), item);
 		}
 
 

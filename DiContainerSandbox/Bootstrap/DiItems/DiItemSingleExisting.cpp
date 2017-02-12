@@ -4,8 +4,8 @@
 namespace Bootstrap {
 	namespace DiItems {
 
-		DiItemSingleExisting::DiItemSingleExisting(DiResult result)
-			: result(result)
+		DiItemSingleExisting::DiItemSingleExisting(DiResult result, std::type_info const & type)
+			: IDiItem(type), result(result)
 		{}
 
 

@@ -11,7 +11,7 @@ namespace Bootstrap {
 		class DiItemSingleExisting : public IDiItem
 		{
 		public:
-			DiItemSingleExisting(DiResult result);
+			DiItemSingleExisting(DiResult result, std::type_info const & type);
 
 			virtual ~DiItemSingleExisting() {};
 

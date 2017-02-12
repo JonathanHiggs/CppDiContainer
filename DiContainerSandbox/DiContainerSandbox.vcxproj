@@ -164,6 +164,7 @@
     <ClCompile Include="Bootstrap\DiItems\DiItemMany.cpp" />
     <ClCompile Include="Bootstrap\DiItems\DiItemSingle.cpp" />
     <ClCompile Include="Bootstrap\DiItems\DiItemSingleExisting.cpp" />
+    <ClCompile Include="Bootstrap\DiItems\DiItemSinglePerGraph.cpp" />
     <ClCompile Include="Bootstrap\DiItems\IDiItemConfig.cpp" />
     <ClCompile Include="Common\Logging\FileHandler.cpp" />
     <ClCompile Include="Common\Logging\Logger.cpp" />
@@ -182,6 +183,7 @@
     <ClInclude Include="Bootstrap\DiItems\DiItemSingle.h" />
     <ClInclude Include="Bootstrap\DiItems\DiItemSingleConfig.h" />
     <ClInclude Include="Bootstrap\DiItems\DiItemSingleExisting.h" />
+    <ClInclude Include="Bootstrap\DiItems\DiItemSinglePerGraph.h" />
     <ClInclude Include="Bootstrap\DiItems\IDiItem.h" />
     <ClInclude Include="Bootstrap\DiItems\IDiItemConfig.h" />
     <ClInclude Include="Bootstrap\DiResult.h" />

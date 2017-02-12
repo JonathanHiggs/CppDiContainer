@@ -64,6 +64,9 @@
     <ClCompile Include="Bootstrap\DiItemRegister.cpp">
       <Filter>Source Files\Bootstrap</Filter>
     </ClCompile>
+    <ClCompile Include="Bootstrap\DiItems\DiItemSinglePerGraph.cpp">
+      <Filter>Source Files\Bootstrap\DiItems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\Logging\ILogHandler.h">
@@ -152,6 +155,9 @@
     </ClInclude>
     <ClInclude Include="Bootstrap\IContextResolver.h">
       <Filter>Source Files\Bootstrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\DiItems\DiItemSinglePerGraph.h">
+      <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

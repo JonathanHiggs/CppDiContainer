@@ -1,11 +1,10 @@
 #include <iostream>
+
 #include "Bootstrap\DiContainer.h"
 #include "Common\logging.h"
 #include "Common\Service\ServiceA.h"
 #include "Common\Service\ServiceB.h"
 
-#include <iomanip>
-#include <ctime>
 
 using namespace std;
 using namespace Bootstrap;
@@ -36,7 +35,7 @@ DiContainerPtr bootstrap(LoggingServicePtr loggingService)
 	container->Register<DiContainer>(container);
 	container->Register<LoggingService>(loggingService);
 	container->Register<ServiceA>([](IResolver & r) { return make_shared<ServiceA>(r.Resolve<LoggingService>()->GetLogger("ServiceA")); }).AsMany();
-	container->Register<ServiceB>([](IResolver & r) { return make_shared<ServiceB>(r.Resolve<LoggingService>()->GetLogger("ServiceB")); });
+	container->Register<ServiceB>([](IResolver & r) { return make_shared<ServiceB>(r.Resolve<LoggingService>()->GetLogger("ServiceB")); }).AsSinglePerGraph();
 
 	return container;
 }
