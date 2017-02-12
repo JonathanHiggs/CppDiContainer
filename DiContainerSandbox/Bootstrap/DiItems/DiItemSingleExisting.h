@@ -15,7 +15,7 @@ namespace Bootstrap {
 
 			virtual ~DiItemSingleExisting() {};
 
-			virtual DiResult Resolve(IResolver & resolver);
+			virtual DiResult Resolve(IContextResolver & resolver);
 
 		protected:
 			virtual void PrintConfig(std::ostream& os) const;

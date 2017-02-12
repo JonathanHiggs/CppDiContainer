@@ -16,7 +16,7 @@ namespace Bootstrap {
 
 			virtual ~DiItemMany() {};
 
-			virtual DiResult Resolve(IResolver & resolver);
+			virtual DiResult Resolve(IContextResolver & resolver);
 
 			const DiCreates::Constructor & GetCreate() const;
 

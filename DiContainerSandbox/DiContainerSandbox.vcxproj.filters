@@ -58,6 +58,12 @@
     <ClCompile Include="Bootstrap\DiItems\DiItemSingleExisting.cpp">
       <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClCompile>
+    <ClCompile Include="Bootstrap\DiContextResolver.cpp">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClCompile>
+    <ClCompile Include="Bootstrap\DiItemRegister.cpp">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\Logging\ILogHandler.h">
@@ -137,6 +143,15 @@
     </ClInclude>
     <ClInclude Include="Bootstrap\DiItems\DiItemSingleExisting.h">
       <Filter>Source Files\Bootstrap\DiItems</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\DiContextResolver.h">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\DiItemRegister.h">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClInclude>
+    <ClInclude Include="Bootstrap\IContextResolver.h">
+      <Filter>Source Files\Bootstrap</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

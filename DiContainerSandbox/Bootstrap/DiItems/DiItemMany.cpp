@@ -14,7 +14,7 @@ namespace Bootstrap {
 		{}
 
 
-		DiResult DiItemMany::Resolve(IResolver & resolver)
+		DiResult DiItemMany::Resolve(IContextResolver & resolver)
 		{
 			return create(resolver);
 		}

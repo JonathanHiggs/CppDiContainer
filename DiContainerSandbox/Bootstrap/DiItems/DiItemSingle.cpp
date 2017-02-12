@@ -9,7 +9,7 @@ namespace Bootstrap {
 		{}
 
 
-		DiResult DiItemSingle::Resolve(IResolver & resolver)
+		DiResult DiItemSingle::Resolve(IContextResolver & resolver)
 		{
 			if (!created)
 			{

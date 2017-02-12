@@ -159,6 +159,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bootstrap\DiContainer.cpp" />
+    <ClCompile Include="Bootstrap\DiContextResolver.cpp" />
+    <ClCompile Include="Bootstrap\DiItemRegister.cpp" />
     <ClCompile Include="Bootstrap\DiItems\DiItemMany.cpp" />
     <ClCompile Include="Bootstrap\DiItems\DiItemSingle.cpp" />
     <ClCompile Include="Bootstrap\DiItems\DiItemSingleExisting.cpp" />
@@ -172,7 +174,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bootstrap\DiContainer.h" />
+    <ClInclude Include="Bootstrap\DiContextResolver.h" />
     <ClInclude Include="Bootstrap\DiCreate.h" />
+    <ClInclude Include="Bootstrap\DiItemRegister.h" />
     <ClInclude Include="Bootstrap\DiItems\DiItemMany.h" />
     <ClInclude Include="Bootstrap\DiItems\DiItemManyConfig.h" />
     <ClInclude Include="Bootstrap\DiItems\DiItemSingle.h" />
@@ -181,6 +185,7 @@
     <ClInclude Include="Bootstrap\DiItems\IDiItem.h" />
     <ClInclude Include="Bootstrap\DiItems\IDiItemConfig.h" />
     <ClInclude Include="Bootstrap\DiResult.h" />
+    <ClInclude Include="Bootstrap\IContextResolver.h" />
     <ClInclude Include="Bootstrap\IRegistrar.h" />
     <ClInclude Include="Bootstrap\IResolver.h" />
     <ClInclude Include="Common\logging.h" />

@@ -5,6 +5,8 @@
 #include <memory>
 #include <typeinfo>
 
+#include "Util\memory.h"
+
 
 namespace Bootstrap {
 
@@ -40,4 +42,7 @@ namespace Bootstrap {
 		std::type_info const * type;
 		std::shared_ptr<void> item;
 	};
+
+	DECLARE_POINTERS(DiResult);
+
 }

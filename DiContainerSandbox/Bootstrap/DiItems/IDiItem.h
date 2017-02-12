@@ -1,8 +1,8 @@
 #pragma once
 
 
-#include "Bootstrap\IResolver.h"
 #include "Bootstrap\DiResult.h"
+#include "Bootstrap\IContextResolver.h"
 
 
 namespace Bootstrap {
@@ -13,7 +13,7 @@ namespace Bootstrap {
 		public:
 			virtual ~IDiItem() {};
 
-			virtual DiResult Resolve(IResolver & resolver) = 0;
+			virtual DiResult Resolve(IContextResolver & resolver) = 0;
 
 			friend std::ostream& operator<< (std::ostream& os, const IDiItem & item)
 			{
