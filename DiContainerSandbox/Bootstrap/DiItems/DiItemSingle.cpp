@@ -35,7 +35,7 @@ namespace Bootstrap {
 
 		void DiItemSingle::PrintConfig(std::ostream& os) const
 		{
-			os << "Single result mapping";
+			os << "Singleton";
 			if (created)
 				os << " (created)";
 		}

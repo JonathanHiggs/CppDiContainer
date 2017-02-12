@@ -33,7 +33,7 @@ namespace Bootstrap {
 
 		void DiItemSinglePerGraph::PrintConfig(std::ostream& os) const
 		{
-			os << "Single per graph";
+			os << "Singleton per graph resolution";
 		}
 	}
 }

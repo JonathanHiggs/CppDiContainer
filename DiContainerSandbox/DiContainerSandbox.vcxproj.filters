@@ -159,5 +159,11 @@
     <ClInclude Include="Bootstrap\DiItems\DiItemSinglePerGraph.h">
       <Filter>Source Files\Bootstrap\DiItems</Filter>
     </ClInclude>
+    <ClInclude Include="Common\Service\ServiceC.h">
+      <Filter>Source Files\Common\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Service\ServiceD.h">
+      <Filter>Source Files\Common\Service</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

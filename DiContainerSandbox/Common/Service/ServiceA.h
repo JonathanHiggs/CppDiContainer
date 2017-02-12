@@ -4,21 +4,26 @@
 #include "Common\Service\ServiceBase.h"
 
 
-namespace Service {
+namespace Common {
+	namespace Service {
 
-	class ServiceA : public ServiceBase
-	{
-	public:
-		ServiceA(Common::Logging::LoggerCPtr logger)
-			: ServiceBase(logger)
-		{};
-
-		~ServiceA() {};
-
-		virtual void OnInit()
+		class ServiceA : public ServiceBase
 		{
-			logger->Info("Init ServiceA");
+		public:
+			ServiceA(Common::Logging::LoggerCPtr logger)
+				: ServiceBase(logger)
+			{};
+
+			virtual ~ServiceA() {};
+
+			virtual void OnInit()
+			{
+				logger->Info("Init ServiceA");
+			};
 		};
-	};
+
+		DECLARE_POINTERS(ServiceA);
+
+	}
 }
 

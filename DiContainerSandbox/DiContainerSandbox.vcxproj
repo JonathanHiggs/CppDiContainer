@@ -202,6 +202,8 @@
     <ClInclude Include="Common\Service\ServiceA.h" />
     <ClInclude Include="Common\Service\ServiceB.h" />
     <ClInclude Include="Common\Service\ServiceBase.h" />
+    <ClInclude Include="Common\Service\ServiceC.h" />
+    <ClInclude Include="Common\Service\ServiceD.h" />
     <ClInclude Include="Util\memory.h" />
     <ClInclude Include="Util\types.h" />
   </ItemGroup>

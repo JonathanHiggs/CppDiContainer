@@ -28,7 +28,7 @@ namespace Bootstrap {
 
 		void DiItemMany::PrintConfig(std::ostream& os) const
 		{
-			os << "Many instances mapping";
+			os << "Non-singleton";
 		}
 
 	}

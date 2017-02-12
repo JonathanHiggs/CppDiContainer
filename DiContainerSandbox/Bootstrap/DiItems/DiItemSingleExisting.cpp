@@ -17,7 +17,7 @@ namespace Bootstrap {
 
 		void DiItemSingleExisting::PrintConfig(std::ostream& os) const
 		{
-			os << "Single existing";
+			os << "Pre-created singleton";
 		}
 
 	}

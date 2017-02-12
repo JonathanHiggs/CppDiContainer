@@ -7,36 +7,39 @@
 #include "Common\logging.h"
 
 
-namespace Service {
+namespace Common {
+	namespace Service {
 
-	class ServiceBase
-	{
-	public:
-		ServiceBase(Common::Logging::LoggerCPtr logger)
-			: logger(logger), initted(false)
-		{ };
-
-		~ServiceBase() {};
-
-		void Init()
+		class ServiceBase
 		{
-			if (!initted)
+		public:
+			ServiceBase(Common::Logging::LoggerCPtr logger)
+				: logger(logger), initted(false)
+			{ };
+
+			virtual ~ServiceBase() {};
+
+			void Init()
 			{
-				OnInit();
-				initted = true;
+				if (!initted)
+				{
+					OnInit();
+					initted = true;
+				}
+				else
+				{
+					logger->Info("Already initted");
+				}
 			}
-			else
-			{
-				logger->Info("Already initted");
-			}
-		}
 
-	protected:
-		virtual void OnInit() = 0;
+		protected:
+			virtual void OnInit() = 0;
 
-		Common::Logging::LoggerCPtr logger;
+			Common::Logging::LoggerCPtr logger;
 
-	private:
-		bool initted;
-	};
+		private:
+			bool initted;
+		};
+
+	}
 }
